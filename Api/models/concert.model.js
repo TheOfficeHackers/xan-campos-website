@@ -13,7 +13,7 @@ const isValidHour = (hour) => {
 
 const concertSchema = new Schema(
   {
-    date: {
+    fecha: {
       type: Date,
       required: true,
     },
@@ -49,8 +49,20 @@ const concertSchema = new Schema(
       maxLength: [150, "Event's name is too long"]
     }
 
+  }, 
+  { 
+    timestamps: true,
+    toJSON: {
+      virtuals: true,
+      transform: (doc, ret) => {
+        delete ret.__v;
+        ret.id = ret._id;
+        delete ret._id;
+        return ret;
+      },
+    }, 
   }
 );
 
 const Concert = mongoose.model("Concert", concertSchema);
-module.exports = Concert
+module.exports = Concert;
