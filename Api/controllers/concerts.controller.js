@@ -16,7 +16,8 @@ module.exports.create = (req, res, next) => {
 };
 
 module.exports.delete = (req, res, next) => {
-  Concert.deleteOne({ _id: req.concert.id })
+
+  Concert.deleteOne({ _id: req.params.id })
     .then(() => res.status(204).send())
     .catch(next);
 };
