@@ -4,7 +4,9 @@ const bcrypt = require("bcryptjs");
 
 const WORK_FACTOR = 10;
 
-const emailAllowed = () => { return process.env.EMAIL};
+function emailAllowed(email) {
+  return email === process.env.EMAIL
+  };
 
 const PW_PATTERN = /^.{8,}$/;
 
