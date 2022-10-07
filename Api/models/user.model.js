@@ -10,6 +10,15 @@ function emailAllowed(email) {
 
 const PW_PATTERN = /^.{8,}$/;
 
+const isURL = (value) => {
+  try {
+    new URL(value);
+    return true;
+  } catch (error) {
+    return false;
+  }
+};
+
 const userSchema = new Schema(
   {
     name: {
@@ -33,6 +42,16 @@ const userSchema = new Schema(
       required: "Password is required",
       match: [PW_PATTERN, "Password needs at least 8 chars"],
     },
+    bio: {
+      type: String,
+    },
+    bioPic: {
+      type: String,
+      validate: {
+        validator: isURL,
+        message: "URL is not valid",
+      },
+    } 
   },
   {
     timestamps: true,

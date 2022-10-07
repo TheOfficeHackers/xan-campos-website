@@ -1,4 +1,5 @@
 module.exports = {
   Concert: require("./concert.model"),
-  User: require("./user.model")
+  User: require("./user.model"),
+  Video: require("./video.model")
 };
