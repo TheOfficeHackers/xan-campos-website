@@ -51,7 +51,10 @@ const userSchema = new Schema(
         validator: isURL,
         message: "URL is not valid",
       },
-    } 
+    }, 
+    admin: {
+      type: Boolean,
+    }
   },
   {
     timestamps: true,
