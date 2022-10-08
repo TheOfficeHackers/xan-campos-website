@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const isValidHour = (hour) => moment(hour, 'HH:mm', true).isValid()
 
-
 const HOUR_PATTERN = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/;
 
 const concertSchema = new Schema(
