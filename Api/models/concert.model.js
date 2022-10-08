@@ -1,15 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const isValidHour = (hour) => moment(hour, 'HH:mm', true).isValid()
 
-// const isValidHour = (hour) => {
-//   try {
-//     moment(hour, 'HH:mm', true).isValid()
-//     return true;
-//   } catch (error) {
-//     return false;
-//   }
-// };
 
 const HOUR_PATTERN = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/;
 
@@ -22,8 +15,10 @@ const concertSchema = new Schema(
     hour: {
       type: String,
       required: true,
-      trim: true,
-      match: [HOUR_PATTERN, "Incorrect hour format"],
+      validate: {
+        validator: isValidHour,
+        message: "Hour is not valid",
+      },
     },
     band: {
       type: String,
@@ -47,7 +42,6 @@ const concertSchema = new Schema(
       trim: true,
       maxLength: [150, "Event's name is too long"]
     }
-
   }, 
   { 
     timestamps: true,

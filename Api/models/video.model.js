@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const roles = require("../data/roles.json")
+const roles = require("../data/roles.json");
 
 const isURL = (value) => {
   try {

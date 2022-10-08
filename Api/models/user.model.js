@@ -5,8 +5,8 @@ const bcrypt = require("bcryptjs");
 const WORK_FACTOR = 10;
 
 function emailAllowed(email) {
-  return email === process.env.EMAIL
-  };
+  return email === process.env.EMAIL;
+}
 
 const PW_PATTERN = /^.{8,}$/;
 
@@ -25,6 +25,7 @@ const userSchema = new Schema(
       type: String,
       required: "Name is required",
       trim: true,
+      maxLength: [25, "Your name is too long"]
     },
     email: {
       type: String,
@@ -34,8 +35,8 @@ const userSchema = new Schema(
       unique: true,
       validate: {
         validator: emailAllowed,
-        message: "Register failed"
-      }
+        message: "Register failed",
+      },
     },
     password: {
       type: String,
@@ -44,6 +45,7 @@ const userSchema = new Schema(
     },
     bio: {
       type: String,
+      maxLength: [1500, "Your bio is too much long"]
     },
     bioPic: {
       type: String,
@@ -51,10 +53,10 @@ const userSchema = new Schema(
         validator: isURL,
         message: "URL is not valid",
       },
-    }, 
+    },
     admin: {
       type: Boolean,
-    }
+    },
   },
   {
     timestamps: true,
