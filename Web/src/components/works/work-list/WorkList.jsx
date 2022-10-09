@@ -14,10 +14,10 @@ function WorkList() {
   console.log(works)
 
   return (
-    <div className="row row-cols-12 row-cols-sm-6 row-cols-md-3">
+    <div className="">
       {works
         ? works.map((work) => (
-            <div className="col" key={work.id}>
+            <div className="" key={work.id}>
               <WorkItem {...work} />
             </div>
           ))
