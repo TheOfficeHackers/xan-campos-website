@@ -21,7 +21,6 @@ module.exports.listAlbums = (artistId) => {
                     id: track.id,
                     artists: track.artists,
                     spotifyUrl: track.externalUrls.spotify,
-                    cover: track.images[0],
                     title: track.name,
                     releaseDate: track.releaseDate,
                     discNumber: track.discNumber,

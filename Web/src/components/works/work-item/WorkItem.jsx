@@ -1,8 +1,8 @@
 import React from 'react'
 
-function WorkItem() {
+function WorkItem({ id }) {
   return (
-    <div>WorkItem</div>
+    <div>{id}</div>
   )
 }
 

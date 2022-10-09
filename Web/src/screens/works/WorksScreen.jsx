@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { WorkList } from "../../components"
 
 function WorksScreen() {
   return (
-    <div>WorksScreen</div>
+    <>
+      <WorkList />
+    </>
   )
 }
 
