@@ -2,15 +2,16 @@ import React from "react";
 import "./WorkItem.css";
 
 function WorkItem({ cover, title, artists, tracks }) {
-
   function trackPosition(track) {
-     return tracks.indexOf(track) + 1
-    }
+    return tracks.indexOf(track) + 1;
+  }
 
   function trackDuration(ms) {
     const mins = Math.floor(ms / 60000);
     const secs = ((ms % 60000) / 1000).toFixed(0);
-    return (secs === 60 ? (mins+1) + ":00" : mins + ":" + (secs < 10 ? "0" : "") + secs);
+    return secs === 60
+      ? mins + 1 + ":00"
+      : mins + ":" + (secs < 10 ? "0" : "") + secs;
   }
 
   return (
@@ -22,15 +23,25 @@ function WorkItem({ cover, title, artists, tracks }) {
 
       <div>
         <div>
-          <img src={cover.url} alt={title} style={{ height: 300, width: 300 }} />
+          <img
+            src={cover.url}
+            alt={title}
+            style={{ height: 300, width: 300 }}
+          />
         </div>
         <div>
           {tracks
             ? tracks.map((track) => (
-                <div className="row justify-content-between" key={track.id}>
-                  <h6 className="">{trackPosition(track)}</h6>
-                  <h6 className="">{track.title}</h6>
-                  <h6 className="">{trackDuration(track.durationMs)}</h6>
+                <div
+                  className="d-flex row justify-content-between"
+                  key={track.id}
+                >
+                  <div className="">{trackPosition(track)}</div>
+                  <div className="">{track.title}</div>
+                  <div className="">{trackDuration(track.durationMs)}</div>
+                  <audio className="" controls>
+                    <source src={track.previewUrl} type="audio/mpeg" />
+                  </audio>
                 </div>
               ))
             : "Loading..."}
