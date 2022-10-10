@@ -24,6 +24,6 @@ function WorkList() {
         : "Loading..."}
     </div>
   );
-}
+};
 
 export default WorkList;
