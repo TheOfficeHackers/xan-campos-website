@@ -24,8 +24,18 @@ function WorkItem({ cover, title, artists, tracks }) {
       return;
     }
 
+    music?.pause();
     music = new Audio(audio);
     music.play();
+
+    music.ontimeupdate = () => {
+      const bar = document.getElementById("progress-bar");
+      bar.style.width = `${(music.currentTime * 100) / music.duration}%`;
+    };
+
+    return () => {
+      music?.pause();
+    };
   }, [audio]);
 
   return (
@@ -54,21 +64,50 @@ function WorkItem({ cover, title, artists, tracks }) {
                 <div>
                   Reproductor de música
                   <div className="d-flex justify-content-between">
-                    <button className="btn" onClick={""}>
+                    <button
+                      className="btn"
+                      onClick={() => {
+                        music?.play();
+                      }}
+                    >
                       <i className="fa-solid fa-play"></i>
                     </button>
-                    <button className="btn" onClick={""}>
+                    <button
+                      className="btn"
+                      onClick={() => {
+                        music?.pause();
+                      }}
+                    >
                       <i className="fa-solid fa-pause"></i>
                     </button>
-                    <button className="btn" onClick={""}>
+                    <button
+                      className="btn"
+                      onClick={() => {
+                        if (music && tracks) {
+                          const prevTrack = tracks.find(
+                            (t, i) => tracks[i + 1].previewUrl === audio // [a, b, c, SONANDO, d, e]
+                          );
+
+                          if (prevTrack) {
+                            setAudio(prevTrack.previewUrl);
+                          }
+                        }
+                      }}
+                    >
                       <i className="fa-solid fa-backward"></i>
                     </button>
                     <button className="btn" onClick={""}>
-                      <i className="fa-solid fa-forward"></i>
+                      <i
+                        className="fa-solid fa-forward"
+                        onClick={() => {
+                          // lo mismo pero al reves
+                        }}
+                      ></i>
                     </button>
                   </div>
                   <div className="progress" style={{ height: "5px" }}>
                     <div
+                      id="progress-bar"
                       className="progress-bar bg-danger"
                       role="progressbar"
                       style={{ width: "25%" }}
