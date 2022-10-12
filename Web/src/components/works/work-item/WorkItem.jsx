@@ -19,7 +19,6 @@ function WorkItem({ cover, title, artists, tracks }) {
   }
 
   useEffect(() => {
-    // exec when audio changes
     if (!audio) {
       return;
     }
@@ -37,6 +36,8 @@ function WorkItem({ cover, title, artists, tracks }) {
       music?.pause();
     };
   }, [audio]);
+
+    const currentTrack = tracks.find((track) => track.previewUrl === audio) || tracks[0]
 
   return (
     <div className="card my-5">
@@ -58,12 +59,14 @@ function WorkItem({ cover, title, artists, tracks }) {
             <div className="col-md-8">
               <div className="card-body">
                 <h5 className="card-title">{artists[0].name}</h5>
-                <h5>Nombre canción en reproducción</h5>
+                <h5>{currentTrack.title}</h5>
                 <h5>{title}</h5>
 
                 <div>
-                  Reproductor de música
-                  <div className="d-flex justify-content-between">
+                  <div
+                    id="music-player"
+                    className="d-flex justify-content-between"
+                  >
                     <button
                       className="btn"
                       onClick={() => {
@@ -72,6 +75,7 @@ function WorkItem({ cover, title, artists, tracks }) {
                     >
                       <i className="fa-solid fa-play"></i>
                     </button>
+
                     <button
                       className="btn"
                       onClick={() => {
@@ -80,14 +84,14 @@ function WorkItem({ cover, title, artists, tracks }) {
                     >
                       <i className="fa-solid fa-pause"></i>
                     </button>
+
                     <button
                       className="btn"
                       onClick={() => {
                         if (music && tracks) {
                           const prevTrack = tracks.find(
-                            (t, i) => tracks[i + 1].previewUrl === audio // [a, b, c, SONANDO, d, e]
+                            (t, i) => tracks[i + 1]?.previewUrl === audio
                           );
-
                           if (prevTrack) {
                             setAudio(prevTrack.previewUrl);
                           }
@@ -96,21 +100,33 @@ function WorkItem({ cover, title, artists, tracks }) {
                     >
                       <i className="fa-solid fa-backward"></i>
                     </button>
-                    <button className="btn" onClick={""}>
-                      <i
-                        className="fa-solid fa-forward"
-                        onClick={() => {
-                          // lo mismo pero al reves
-                        }}
-                      ></i>
+
+                    <button
+                      className="btn"
+                      onClick={() => {
+                        if (music && tracks) {
+                          console.log(music);
+                          console.log(tracks);
+                          const nextTrack = tracks.find(
+                            (t, i) => tracks[i - 1]?.previewUrl === audio 
+                          );
+                          console.log(nextTrack)
+                          if (nextTrack) {
+                            setAudio(nextTrack.previewUrl);
+                          }
+                        }
+                      }}
+                    >
+                      <i className="fa-solid fa-forward"></i>
                     </button>
                   </div>
+
                   <div className="progress" style={{ height: "5px" }}>
                     <div
                       id="progress-bar"
                       className="progress-bar bg-danger"
                       role="progressbar"
-                      style={{ width: "25%" }}
+                      style={{ width: "0%" }}
                       aria-valuenow="25"
                       aria-valuemin="0"
                       aria-valuemax="100"
@@ -120,6 +136,7 @@ function WorkItem({ cover, title, artists, tracks }) {
               </div>
             </div>
           </div>
+
           <div className="card border-0 ms-3 me-3">
             <h5 className="card-title mt-3">Tracklist</h5>
             {tracks
