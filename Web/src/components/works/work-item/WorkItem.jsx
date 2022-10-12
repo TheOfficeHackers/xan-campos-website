@@ -3,7 +3,7 @@ import "./WorkItem.css";
 
 let music;
 
-function WorkItem({ cover, title, artists, tracks }) {
+function WorkItem({ cover, title, artists, tracks, releaseDate }) {
   const [audio, setAudio] = useState();
 
   function trackPosition(track) {
@@ -32,18 +32,24 @@ function WorkItem({ cover, title, artists, tracks }) {
       bar.style.width = `${(music.currentTime * 100) / music.duration}%`;
     };
 
+    console.log(music.currentTime)
+    console.log(music.duration)
+
     return () => {
       music?.pause();
     };
   }, [audio]);
 
-    const currentTrack = tracks.find((track) => track.previewUrl === audio) || tracks[0]
+  const currentTrack =
+    tracks.find((track) => track.previewUrl === audio) || tracks[0];
+
+  const releaseYear = releaseDate.slice(0,4);     
 
   return (
     <div className="card my-5">
       <div className="row g-0">
-        <div className="card col-md-4 my-2 border-0">
-          <h2>Realismo (2020)</h2>
+        <div className="card col-md-4 my-2 ms-2 border-0">
+          <h2>{title} ({releaseYear})</h2>
         </div>
 
         <div className="card mb-3" style={{ maxWidth: "540px" }}>
@@ -108,9 +114,9 @@ function WorkItem({ cover, title, artists, tracks }) {
                           console.log(music);
                           console.log(tracks);
                           const nextTrack = tracks.find(
-                            (t, i) => tracks[i - 1]?.previewUrl === audio 
+                            (t, i) => tracks[i - 1]?.previewUrl === audio
                           );
-                          console.log(nextTrack)
+                          console.log(nextTrack);
                           if (nextTrack) {
                             setAudio(nextTrack.previewUrl);
                           }
@@ -119,6 +125,7 @@ function WorkItem({ cover, title, artists, tracks }) {
                     >
                       <i className="fa-solid fa-forward"></i>
                     </button>
+                    <div id="track-chrono">{music?.currentTime || "00:00"}/{trackDuration(currentTrack.durationMs)}</div>
                   </div>
 
                   <div className="progress" style={{ height: "5px" }}>
@@ -137,23 +144,35 @@ function WorkItem({ cover, title, artists, tracks }) {
             </div>
           </div>
 
-          <div className="card border-0 ms-3 me-3">
+          <div className="card border-0 ms-2 me-2">
             <h5 className="card-title mt-3">Tracklist</h5>
-            {tracks
-              ? tracks.map((track) => (
-                  <div
-                    onClick={() => {
-                      setAudio(track.previewUrl);
-                    }}
-                    className="d-flex justify-content-between my-2"
-                    key={track.id}
-                  >
-                    <div>{trackPosition(track)}</div>
-                    <div>{track.title}</div>
-                    <div>{trackDuration(track.durationMs)}</div>
-                  </div>
-                ))
-              : "Loading..."}
+            <div
+              style={{
+                width: "10",
+                height: "10rem",
+                overflow: "scroll",
+                overflowX: "hidden",
+              }}
+            >
+              {tracks
+                ? tracks.map((track) => (
+                    <div>
+                      <div
+                        onClick={() => {
+                          setAudio(track.previewUrl);
+                        }}
+                        className="d-flex justify-content-between my-2 me-2"
+                        key={track.id}
+                      >
+                        <div>{trackPosition(track)}</div>
+                        <div>{track.title}</div>
+                        <div>{trackDuration(track.durationMs)}</div>
+                      </div>
+                      <hr className="text-muted m-0"></hr>
+                    </div>
+                  ))
+                : "Loading..."}
+            </div>
           </div>
         </div>
       </div>
