@@ -7,10 +7,10 @@ function Header() {
     <div className="my-3">
       <div className="d-flex">
         <div
-          class="offcanvas offcanvas-end d-flex align-items-end flex-column bgcolor text-end"
+          class="offcanvas offcanvas-end d-flex align-items-end flex-column bgcolor text-end pe-3"
           id="demo"
         >
-          <div class="offcanvas-header ">
+          <div class="offcanvas-header">
             <button
               type="button"
               class="fa-solid fa-xmark fs-2 bgcolor border-0 text-light close-btn"
