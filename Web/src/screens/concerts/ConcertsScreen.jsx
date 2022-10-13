@@ -1,11 +1,12 @@
 import React from "react";
-import { Header } from "../../components";
+import { ConcertList, Header } from "../../components";
 
 function ConcertsScreen() {
   return (
     <>
       <Header />
-      <div>ConcertsScreen</div>
+      <div>Foto</div>
+      <ConcertList />
     </>
   );
 }

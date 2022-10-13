@@ -8,3 +8,7 @@ const http = axios.create({
 export function getWorks() {
   return http.get("/works");
 }
+
+export function getConcerts() {
+  return http.get("/concerts")
+}

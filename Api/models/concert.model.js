@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const moment = require('moment')
+
 
 const isValidHour = (hour) => moment(hour, 'HH:mm', true).isValid()
 
-const HOUR_PATTERN = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/;
-
 const concertSchema = new Schema(
   {
-    fecha: {
+    date: {
       type: Date,
       required: true,
     },
@@ -30,6 +30,9 @@ const concertSchema = new Schema(
       required: true,
       trim: true,
       maxLength: [150, "Venue's name is too long"]
+    },
+    city: {
+      type: String,
     },
     country: {
       type: String,

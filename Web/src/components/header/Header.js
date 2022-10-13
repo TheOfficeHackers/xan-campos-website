@@ -11,11 +11,11 @@ function Header() {
           id="demo"
         >
           <div class="offcanvas-header">
-            <button
+            <i
               type="button"
-              class="fa-solid fa-xmark fs-2 bgcolor border-0 text-light close-btn"
+              class="fa-solid fa-xmark fs-2 bgcolor border-0 text-light close-btn me-3"
               data-bs-dismiss="offcanvas"
-            ></button>
+            ></i>
           </div>
           
             <div class="offcanvas-body bgcolor fw-bold ">
@@ -73,6 +73,7 @@ function Header() {
           <h3>XAN CAMPOS</h3>
         </div>
 
+        {/* button */}
         <div className="ms-auto">
           <i
             className="fa fa-bars text-danger fs-3"
