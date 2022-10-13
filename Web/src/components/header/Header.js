@@ -1,68 +1,88 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Header.css"
+import "./Header.css";
 
 function Header() {
   return (
-    <>
-      <div className="d-flex justify-content-between">
-        <div class="offcanvas offcanvas-end" id="demo">
-          <div class="offcanvas-header bgcolor">
+    <div className="my-3">
+      <div className="d-flex">
+        <div
+          class="offcanvas offcanvas-end d-flex align-items-end flex-column bgcolor text-end"
+          id="demo"
+        >
+          <div class="offcanvas-header ">
             <button
               type="button"
-              class="btn-close text-reset "
+              class="fa-solid fa-xmark fs-2 bgcolor border-0 text-light close-btn"
               data-bs-dismiss="offcanvas"
             ></button>
           </div>
-          <div class="offcanvas-body bgcolor fw-bold">
-            <ul class="list-unstyled">
-              <li className="my-3">
-                <Link
-                  to="/discography"
-                  className="text-decoration-none text-dark fs-3"
-                >
-                  <btn>DISCOGRAPHY</btn>
-                </Link>
-              </li>
-              <li className="my-3">
-                <Link
-                  to="/concerts"
-                  className="text-decoration-none text-dark fs-3"
-                >
-                  <btn>NEXT CONCERTS</btn>
-                </Link>
-              </li>
-              <li className="my-3">
-                <Link
-                  to="/videos"
-                  className="text-decoration-none text-dark fs-3"
-                >
-                  <btn>VIDEOS</btn>
-                </Link>
-              </li>
-              <li className="my-3">
-                <Link
-                  to="/contact"
-                  className="text-decoration-none text-dark fs-3"
-                >
-                  <btn>CONTACT</btn>
-                </Link>
-              </li>
-            </ul>
-          </div>
+          
+            <div class="offcanvas-body bgcolor fw-bold ">
+              <ul class="list-unstyled my-5 py-5">
+                <li className="my-3">
+                  <Link to="/" className="text-decoration-none text-light fs-2">
+                    <btn>HOME</btn>
+                  </Link>
+                </li>
+                <li className="my-3">
+                  <Link
+                    to="/discography"
+                    className="text-decoration-none text-light fs-2"
+                  >
+                    <btn>DISCOGRAPHY</btn>
+                  </Link>
+                </li>
+                <li className="my-3">
+                  <Link
+                    to="/concerts"
+                    className="text-decoration-none text-light fs-2"
+                  >
+                    <btn>NEXT CONCERTS</btn>
+                  </Link>
+                </li>
+                <li className="my-3">
+                  <Link
+                    to="/videos"
+                    className="text-decoration-none text-light fs-2"
+                  >
+                    <btn>VIDEOS</btn>
+                  </Link>
+                </li>
+                <li className="my-3">
+                  <Link
+                    to="/contact"
+                    className="text-decoration-none text-light fs-2"
+                  >
+                    <btn>CONTACT</btn>
+                  </Link>
+                </li>
+              </ul>
+
+              <div className="d-flex justify-content-around">
+                <i className="fa-brands fa-facebook-f fs-3 text-light social"></i>
+                <i className="fa-brands fa-twitter fs-3 text-light social"></i>
+                <i className="fa-brands fa-youtube fs-3 text-light social"></i>
+                <i className="fa-brands fa-instagram fs-3 text-light social"></i>
+              </div>
+            </div>
+          
         </div>
-        <div className="header-title">
-          <h3>Xan Campos</h3>
+
+        <div className="header-title text-danger">
+          <h3>XAN CAMPOS</h3>
         </div>
-        <div><i className="fa fa-bars text-danger fs-3"
+
+        <div className="ms-auto">
+          <i
+            className="fa fa-bars text-danger fs-3"
             type="button"
             data-bs-toggle="offcanvas"
-            data-bs-target="#demo">
-            
-        </i> 
+            data-bs-target="#demo"
+          ></i>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Header } from "../../components";
 
 function ConcertsScreen() {
   return (
-    <div>ConcertsScreen</div>
-  )
+    <>
+      <Header />
+      <div>ConcertsScreen</div>
+    </>
+  );
 }
 
-export default ConcertsScreen
+export default ConcertsScreen;

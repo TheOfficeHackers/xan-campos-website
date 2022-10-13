@@ -6,11 +6,17 @@ btn {
  
 }
 
-/* Style the active class (and buttons on mouse-over) */
  btn:hover {
-  color: rgba(255, 255, 255, 0.712);
-  transition: 0.8s
+  color: rgba(8, 8, 8, 0.712) ;
+  transition: 0.5s;
+  font-weight: bold;
 }
+
+.close-btn:hover {
+  color: rgba(8, 8, 8, 0.712) !important;
+  transition: 0.5s;
+  font-weight: bolder !important;
+} 
 
 .bgcolor {
   background-color: rgb(168, 44, 44)}
@@ -22,3 +28,11 @@ btn {
   color: rgb(168, 44, 44)
 }
 
+.social {
+  margin-top: 200px;
+  cursor: pointer;
+}
+
+.social:hover {
+  font-weight: bolder;
+}

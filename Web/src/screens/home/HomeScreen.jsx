@@ -1,8 +1,12 @@
 import React from 'react'
+import { Header } from '../../components'
 
 function HomeScreen() {
   return (
-    <div>HomeScreen</div>
+    <>
+      <Header />
+      <div>Home</div>
+    </>
   )
 }
 

@@ -1,8 +1,12 @@
 import React from 'react'
+import { Header } from '../../components'
 
 function VideosScreen() {
   return (
-    <div>VideosScreen</div>
+    <>
+      <Header />
+      <div>Videos</div>
+    </>
   )
 }
 

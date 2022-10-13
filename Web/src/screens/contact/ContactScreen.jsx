@@ -1,8 +1,12 @@
 import React from 'react'
+import { Header } from '../../components'
 
 function ContactScreen() {
   return (
-    <div>ContactScreen</div>
+    <>
+      <Header />
+      <div>Contact</div>
+    </>
   )
 }
 
