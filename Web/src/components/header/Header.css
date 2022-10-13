@@ -1,0 +1,24 @@
+btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  cursor: pointer;
+ 
+}
+
+/* Style the active class (and buttons on mouse-over) */
+ btn:hover {
+  color: rgba(255, 255, 255, 0.712);
+  transition: 0.8s
+}
+
+.bgcolor {
+  background-color: rgb(168, 44, 44)}
+
+.offcanvas {
+  transition: 1s !important;
+}
+.header-title {
+  color: rgb(168, 44, 44)
+}
+

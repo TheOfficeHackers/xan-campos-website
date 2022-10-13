@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import Header from "./components/header/Header";
 import { WorksScreen, HomeScreen, ConcertsScreen, VideosScreen, ContactScreen, AdminAuthScreen, AdminDashboardScreen, ErrorsScreen } from "./screens"
 
 function App() {
