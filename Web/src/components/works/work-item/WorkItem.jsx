@@ -156,13 +156,13 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
             >
               {tracks
                 ? tracks.map((track) => (
-                    <div>
+                    <div key={track.id}>
                       <div
                         onClick={() => {
                           setAudio(track.previewUrl);
                         }}
                         className="d-flex justify-content-between my-2 me-2"
-                        key={track.id}
+                        
                       >
                         <div>{trackPosition(track)}</div>
                         <div>{track.title}</div>
