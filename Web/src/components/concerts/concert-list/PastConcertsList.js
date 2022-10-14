@@ -1,9 +1,11 @@
+
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { getConcerts } from "../../../services/website-service";
 import ConcertItem from "../concert-item/ConcertItem";
+import moment from "moment";
 
-function ConcertList() {
+function PastConcertsList() {
   const [concerts, setConcerts] = useState(null);
 
   useEffect(() => {
@@ -11,22 +13,23 @@ function ConcertList() {
       .then((concerts) => setConcerts(concerts.data))
       .catch((err) => console.error(err));
   }, []);
- console.log(concerts)
+  console.log(concerts)
 
- 
   return (
     <>
       <div>
-        {concerts 
-        ? concerts.map((concert) => (
-              <div key={concert.id}>
+      {
+        concerts
+          ? concerts.filter((concert) => moment(concert.date).isBefore(new Date())).map((concert) => (
+               <div key={concert.id}>
                 <ConcertItem {...concert} />
-              </div>
-            ))
-          : "Loading..."}
+             </div>
+        ))
+          : "Loading..."
+      }  
       </div>
     </>
   );
 }
 
-export default ConcertList;
+export default PastConcertsList

@@ -8,7 +8,7 @@ function App() {
       <div className="py-2 px-5">
         <Routes>
           <Route path="/" element={<HomeScreen />} />
-          <Route path="/concerts" element={<ConcertsScreen />} />
+          <Route path="/concerts/*" element={<ConcertsScreen />} />
           <Route path="/discography" element={<WorksScreen />} />
           <Route path="/videos" element={<VideosScreen />} />
           <Route path="/contact" element={<ContactScreen />} />
