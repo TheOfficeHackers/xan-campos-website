@@ -7,22 +7,23 @@ function Header() {
     <div className="my-3">
       <div className="d-flex">
         <div
-          class="offcanvas offcanvas-end d-flex align-items-end flex-column bgcolor text-end pe-3"
+          className="offcanvas offcanvas-end d-flex align-items-end flex-column bgcolor text-end pe-3"
+          data-bs-scroll="true"
           id="demo"
         >
-          <div class="offcanvas-header">
+          <div className="offcanvas-header">
             <i
               type="button"
-              class="fa-solid fa-xmark fs-2 bgcolor border-0 text-light close-btn me-3"
+              className="fa-solid fa-xmark fs-2 bgcolor border-0 text-light close-btn me-3"
               data-bs-dismiss="offcanvas"
             ></i>
           </div>
           
-            <div class="offcanvas-body bgcolor fw-bold ">
-              <ul class="list-unstyled my-5 py-5">
+            <div className="offcanvas-body bgcolor fw-bold ">
+              <ul className="list-unstyled my-5 py-5">
                 <li className="my-3">
                   <Link to="/" className="text-decoration-none text-light fs-2">
-                    <btn>HOME</btn>
+                    <p>HOME</p>
                   </Link>
                 </li>
                 <li className="my-3">
@@ -30,7 +31,7 @@ function Header() {
                     to="/discography"
                     className="text-decoration-none text-light fs-2"
                   >
-                    <btn>DISCOGRAPHY</btn>
+                    <p>DISCOGRAPHY</p>
                   </Link>
                 </li>
                 <li className="my-3">
@@ -38,7 +39,7 @@ function Header() {
                     to="/concerts"
                     className="text-decoration-none text-light fs-2"
                   >
-                    <btn>NEXT CONCERTS</btn>
+                    <p>NEXT CONCERTS</p>
                   </Link>
                 </li>
                 <li className="my-3">
@@ -46,7 +47,7 @@ function Header() {
                     to="/videos"
                     className="text-decoration-none text-light fs-2"
                   >
-                    <btn>VIDEOS</btn>
+                    <p>VIDEOS</p>
                   </Link>
                 </li>
                 <li className="my-3">
@@ -54,7 +55,7 @@ function Header() {
                     to="/contact"
                     className="text-decoration-none text-light fs-2"
                   >
-                    <btn>CONTACT</btn>
+                    <p>CONTACT</p>
                   </Link>
                 </li>
               </ul>

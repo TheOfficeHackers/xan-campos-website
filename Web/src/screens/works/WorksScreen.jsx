@@ -1,5 +1,5 @@
 import React from 'react';
-import { WorkList } from "../../components"
+import { ColabosList, WorkList } from "../../components"
 import Header from '../../components/header/Header';
 
 function WorksScreen() {
@@ -7,6 +7,7 @@ function WorksScreen() {
     <>
       <Header />
       <WorkList />
+      <ColabosList />
     </>
   )
 }

@@ -11,7 +11,7 @@ const isURL = (value) => {
   }
 };
 
-const workSchema = new Schema({
+const colaboSchema = new Schema({
   title: {
     type: String,
   },
@@ -24,8 +24,8 @@ const workSchema = new Schema({
   musicians: {
     type: [String],
   },
-  release: {
-    type: Date,
+  releaseYear: {
+    type: String,
   },
   cover: {
     type: String,
@@ -34,16 +34,10 @@ const workSchema = new Schema({
       message: "URL is not valid",
     },
   },
-  trackList: {
-    type: [String],
-  },
-  genre: {
-    type: String
-  },
   recordLabel: {
     type: String
   },
 });
 
-const Work = mongoose.model("Work", workSchema);
-module.exports = Work;
+const Colabo = mongoose.model("Colabo", colaboSchema);
+module.exports = Colabo;

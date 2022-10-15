@@ -12,3 +12,7 @@ export function getWorks() {
 export function getConcerts() {
   return http.get("/concerts")
 }
+
+export function getColabos() {
+  return http.get("/colabos")
+}
