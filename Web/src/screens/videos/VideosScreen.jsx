@@ -1,11 +1,11 @@
 import React from 'react'
-import { Header } from '../../components'
+import { Header, VideoList } from '../../components'
 
 function VideosScreen() {
   return (
     <>
       <Header />
-      <div>Videos</div>
+      <VideoList />
     </>
   )
 }

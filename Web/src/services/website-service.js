@@ -7,12 +7,16 @@ const http = axios.create({
 
 export function getWorks() {
   return http.get("/works");
-}
+};
 
 export function getConcerts() {
   return http.get("/concerts")
-}
+};
 
 export function getColabos() {
   return http.get("/colabos")
-}
+};
+
+export function getVideos() {
+  return http.get("/videos")
+};

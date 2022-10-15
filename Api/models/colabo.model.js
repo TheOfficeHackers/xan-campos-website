@@ -37,7 +37,20 @@ const colaboSchema = new Schema({
   recordLabel: {
     type: String
   },
-});
+},
+{
+  timestamps: true,
+  toJSON: {
+    transform: (doc, ret) => {
+      delete ret.__v;
+      ret.id = ret._id;
+      delete ret._id;
+
+      return ret;
+    },
+  },
+}
+);
 
 const Colabo = mongoose.model("Colabo", colaboSchema);
 module.exports = Colabo;

@@ -12,8 +12,8 @@ router.post('/videos', secure.isAuthenticated, videos.create);
 router.delete('/videos/:id', secure.isAuthenticated, videos.delete);
 
 router.get('/colabos', colabos.list);
-router.post('/colabos', colabos.create);
-router.delete('/colabos/:id', colabos.delete);
+router.post('/colabos', secure.isAuthenticated, colabos.create);
+router.delete('/colabos/:id', secure.isAuthenticated, colabos.delete);
 
 
 router.get('/works', works.list);

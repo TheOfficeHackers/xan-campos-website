@@ -1,4 +1,4 @@
-btn {
+p {
   border: none;
   outline: none;
   padding: 10px 16px;
@@ -6,7 +6,7 @@ btn {
  
 }
 
- btn:hover {
+p:hover {
   color: rgba(8, 8, 8, 0.712) ;
   transition: 0.5s;
   font-weight: bold;

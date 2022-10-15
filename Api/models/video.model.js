@@ -11,30 +11,46 @@ const isURL = (value) => {
   }
 };
 
-const videoSchema = new Schema({
-  title: {
-    type: String,
-  },
-  band: {
-    type: String,
-  },
-  role: {
-    type: [
-      {
-        type: String,
-        enum: roles,
+const videoSchema = new Schema(
+  {
+    title: {
+      type: String,
+    },
+    band: {
+      type: String,
+    },
+    role: {
+      type: [
+        {
+          type: String,
+          enum: roles,
+        },
+      ],
+    },
+    url: {
+      type: String,
+      unique: true,
+      validate: {
+        validator: isURL,
+        message: "URL is not valid",
       },
-    ],
-  },
-  url: {
-    type: String,
-    unique: true,
-    validate: {
-      validator: isURL,
-      message: "URL is not valid",
     },
   },
-});
+  {
+    timestamps: true,
+    toJSON: {
+      transform: (doc, ret) => {
+        delete ret.__v;
+        ret.id = ret._id;
+        delete ret._id;
+        ret.role = ret.role[0]
+        delete ret.role[0]
+
+        return ret;
+      },
+    },
+  }
+);
 
 const Video = mongoose.model("Video", videoSchema);
 module.exports = Video;
