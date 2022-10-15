@@ -3,6 +3,9 @@ import { useState } from "react";
 import { getVideos } from "../../../services/website-service";
 import ReactPlayer from "react-player/youtube";
 //import "./VideoList.css"
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
 
 
 function VideoList() {
@@ -14,20 +17,25 @@ function VideoList() {
       .catch((err) => console.error(err));
   }, []);
   console.log(videos)
+  if(!videos) return <></>
 
   return (
     <>
       <div>
+      <Carousel > 
       {
-        videos
-          ? videos.filter((video) => video.role === "Leader").map((video) => (      
-                <ReactPlayer key={video.id} url={video.url} controls={true} />        
+        videos.filter((video) => video.role === "Leader").map((video) => (
+                <div key={video.id}>
+                  
+                  <ReactPlayer  url={video.url} controls={true} renderItem="https://cdn.stocksnap.io/img-thumbs/960w/woodpecker-bird_6XMNEMASTW.jpg" /> 
+                </div>                  
         ))
-          : "Loading..."
       }  
+      </Carousel>
       </div>
     </>
   )
 }
+
 
 export default VideoList
