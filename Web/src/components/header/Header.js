@@ -20,7 +20,7 @@ function Header() {
           </div>
           
             <div className="offcanvas-body bgcolor fw-bold ">
-              <ul className="list-unstyled my-5 py-5">
+              <ul className="list-unstyled my-3 py-3">
                 <li className="my-3">
                   <Link to="/" className="text-decoration-none text-light fs-2">
                     <p>HOME</p>

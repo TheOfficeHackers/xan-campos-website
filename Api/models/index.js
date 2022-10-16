@@ -3,4 +3,5 @@ module.exports = {
   User: require("./user.model"),
   Video: require("./video.model"),
   Colabo: require("./colabo.model"),
+  Contact: require("./contact.model")
 };

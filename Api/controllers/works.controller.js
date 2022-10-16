@@ -1,5 +1,4 @@
 
-const createError = require("http-errors");
 const SpotifyService = require("../services/spotify.services");
 
 

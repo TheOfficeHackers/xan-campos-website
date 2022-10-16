@@ -1,6 +1,4 @@
 const { Colabo } = require("../models");
-const createError = require("http-errors");
-
 
 module.exports.create = (req, res, next) => {
   const colabo = req.body;

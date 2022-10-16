@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { concerts, auth, videos, works, colabos} = require('../controllers/');
-const secure = require("../middleware/secure.mid")
+const { concerts, auth, videos, works, colabos, contact} = require('../controllers/');
+const secure = require("../middleware/secure.mid");
+
 
 router.get('/concerts', concerts.list);
 router.post('/concerts', secure.isAuthenticated, concerts.create);
@@ -15,6 +16,7 @@ router.get('/colabos', colabos.list);
 router.post('/colabos', secure.isAuthenticated, colabos.create);
 router.delete('/colabos/:id', secure.isAuthenticated, colabos.delete);
 
+router.post('/contact', contact.create)
 
 router.get('/works', works.list);
 

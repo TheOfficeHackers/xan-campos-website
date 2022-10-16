@@ -1,5 +1,4 @@
 const { Concert } = require("../models");
-const createError = require("http-errors");
 
 module.exports.list = (req, res, next) => {
   Concert.find()
