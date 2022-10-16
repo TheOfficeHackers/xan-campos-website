@@ -20,3 +20,7 @@ export function getColabos() {
 export function getVideos() {
   return http.get("/videos")
 };
+
+export function createMessage(message) {
+  return http.post("/message", message)
+}

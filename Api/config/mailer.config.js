@@ -16,10 +16,16 @@ module.exports.sendRegistrationEmail = (message) => {
             subject: "New message from www.xancampos.com",
             html: 
             
-        `<h1>Hello Xan</h1>
+        `<h3>Hello Xan,</h3>
             
-        <p>You have a new email from ${message.email}</p>
-        <p>${message.message}</p>`
+        <p>You have a new email from:</p>
+        <p>${message.email}</p>
+        <p>Contact number: ${message.phone ? message.phone : "no number"}</p>
+        <hr>
+        <p><b>${message.name} said: </b></p>
+        <p><i>${message.message}</i></p>
+        <hr>
+        <p>Have a nice day!!</p>`
         })
         .then(() => {
             console.log("email sent!")

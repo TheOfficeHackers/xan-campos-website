@@ -4,5 +4,5 @@ module.exports = {
   videos: require("./videos.controller"),
   works: require("./works.controller"),
   colabos: require("./colabos.controller"),
-  contact: require("./contact.controller")
+  message: require("./message.controller")
 };
