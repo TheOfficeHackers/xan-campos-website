@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getWorks } from "../../../services/website-service";
 import WorkItem from "../work-item/WorkItem";
 
-function WorkList() {
+function WorkList({className}) {
   const [works, setWorks] = useState(null);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function WorkList() {
   console.log(works)
 
   return (
-    <div className="">
+    <div className={className}>
       {works
         ? works.map((work) => (
             <div className="" key={work.id}>
@@ -25,5 +25,9 @@ function WorkList() {
     </div>
   );
 };
+
+WorkList.defaultProps = {
+  className: '',
+}
 
 export default WorkList;

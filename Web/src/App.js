@@ -4,7 +4,7 @@ import { WorksScreen, HomeScreen, ConcertsScreen, VideosScreen, ContactScreen, A
 function App() {
   return (
     <>
-      <div className="py-2 px-5">
+      <div>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/concerts/*" element={<ConcertsScreen />} />

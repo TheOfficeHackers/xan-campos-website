@@ -1,15 +1,16 @@
 import React from "react";
 import { ColabosList, WorkList } from "../../components";
+import CoverPicture from "../../components/cover-picture/CoverPicture";
 import Header from "../../components/header/Header";
+import xcnegative from "../../images/cover-works.png";
 
 function WorksScreen() {
   return (
     <>
       <Header />
-      <div className="container">
-        <WorkList />
-        <ColabosList />
-      </div>
+      <CoverPicture src={xcnegative} />
+      <WorkList/>
+      <ColabosList />
     </>
   );
 }

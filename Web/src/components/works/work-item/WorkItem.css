@@ -4,6 +4,7 @@
 
 .track:hover {
   color:rgb(238, 4, 4);
+  
 }
 
 .track .play {
@@ -12,13 +13,11 @@
 
 .track:hover .play {
   display: inline;
-  transition: 0.5s;
 }
 
 
-
 .transition-red-btn:hover {
-  color:rgb(238, 4, 4);
+  color:rgb(238, 4, 4) !important;
   transition: 0.3s;
 }
 

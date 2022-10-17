@@ -46,17 +46,17 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
   const releaseYear = releaseDate.slice(0, 4);
 
   return (
-    <div className="card my-5 py-4 mx-5 px-5" style={{ maxWidth: "1000px" }}>
-      <div className="row g-0">
-        <div className="card col-md-4 my-2 border-0">
+    <div className="card py-4 px-5 my-3 bg-dark" style={{ maxWidth: "900px"}}>
+      <div className="row g-0 text-light">
+        <div className="card col-md-4 my-2 border-0 bg-dark">
           <h4>
             {title} ({releaseYear})
           </h4>
         </div>
 
         <div
-          className="card mb-3 border-0 ms-auto"
-          style={{ maxWidth: "600px" }}
+          className="card mb-3 border-0 ms-auto bg-dark"
+          style={{ maxWidth: "500px" }}
         >
           <div className="row g-0">
             <div className="col-md-4">
@@ -81,7 +81,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                     
                       }}
                     >
-                      <i className="fa-solid fa-play transition-red-btn fs-4"></i>
+                      <i className="fa-solid fa-play transition-red-btn fs-4 text-light"></i>
                     </button>
 
                     <button
@@ -90,7 +90,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                         music?.pause();
                       }}
                     >
-                      <i className="fa-solid fa-pause transition-red-btn"></i>
+                      <i className="fa-solid fa-pause transition-red-btn text-light"></i>
                     </button>
 
                     <button
@@ -106,7 +106,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                         }
                       }}
                     >
-                      <i className="fa-solid fa-backward-step transition-red-btn"></i>
+                      <i className="fa-solid fa-backward-step transition-red-btn text-light"></i>
                     </button>
 
                     <button
@@ -125,7 +125,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                         }
                       }}
                     >
-                      <i className="fa-solid fa-forward-step transition-red-btn"></i>
+                      <i className="fa-solid fa-forward-step transition-red-btn text-light"></i>
                     </button>
                     <div id="track-chrono">
                       {music?.currentTime || "00:00"}/
@@ -149,7 +149,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
             </div>
           </div>
 
-          <div className="card border-0 ms-2 me-2">
+          <div className="card border-0 ms-2 me-2 bg-dark">
             <h5 className="card-title mt-3">Tracklist</h5>
             <div
               style={{
