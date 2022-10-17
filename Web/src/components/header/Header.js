@@ -4,8 +4,8 @@ import "./Header.css";
 
 function Header() {
   return (
-    <div className="my-3">
-      <div className="d-flex">
+    <div>
+      <div className="d-flex my-4">
         <div
           className="offcanvas offcanvas-end d-flex align-items-end flex-column bgcolor text-end pe-3"
           data-bs-scroll="true"
@@ -14,19 +14,19 @@ function Header() {
           <div className="offcanvas-header">
             <i
               type="button"
-              className="fa-solid fa-xmark fs-2 bgcolor border-0 text-light close-btn me-3"
+              className="fa-solid fa-xmark fs-2 border-0 text-light close-btn me-3"
               data-bs-dismiss="offcanvas"
             ></i>
           </div>
           
-            <div className="offcanvas-body bgcolor fw-bold ">
-              <ul className="list-unstyled my-3 py-3">
-                <li className="my-3">
+            <div className="offcanvas-body bgcolor fw-bold d-flex flex-column justify-content-evenly " >
+              <ul className="list-unstyled d-flex flex-column">
+                <li>
                   <Link to="/" className="text-decoration-none text-light fs-2">
                     <p>HOME</p>
                   </Link>
                 </li>
-                <li className="my-3">
+                <li>
                   <Link
                     to="/discography"
                     className="text-decoration-none text-light fs-2"
@@ -34,7 +34,7 @@ function Header() {
                     <p>DISCOGRAPHY</p>
                   </Link>
                 </li>
-                <li className="my-3">
+                <li >
                   <Link
                     to="/concerts"
                     className="text-decoration-none text-light fs-2"
@@ -42,7 +42,7 @@ function Header() {
                     <p>NEXT CONCERTS</p>
                   </Link>
                 </li>
-                <li className="my-3">
+                <li >
                   <Link
                     to="/videos"
                     className="text-decoration-none text-light fs-2"
@@ -50,7 +50,7 @@ function Header() {
                     <p>VIDEOS</p>
                   </Link>
                 </li>
-                <li className="my-3">
+                <li>
                   <Link
                     to="/contact"
                     className="text-decoration-none text-light fs-2"

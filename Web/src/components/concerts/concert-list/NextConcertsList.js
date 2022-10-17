@@ -19,7 +19,9 @@ function NextConcertList() {
       <div>
       {
         concerts
-          ? concerts.filter((concert) => moment(concert.date).isSameOrAfter(new Date())).map((concert) => (
+          ? concerts.filter((concert) => moment(concert.date).isSameOrAfter(new Date()))
+          .sort((a,b) => new Date(a.date) - new Date(b.date))
+          .map((concert)=> (
                <div key={concert.id}>
                 <ConcertItem {...concert} />
              </div>

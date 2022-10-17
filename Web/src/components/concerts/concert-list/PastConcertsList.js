@@ -20,7 +20,9 @@ function PastConcertsList() {
       <div>
       {
         concerts
-          ? concerts.filter((concert) => moment(concert.date).isBefore(new Date())).map((concert) => (
+          ? concerts.filter((concert) => moment(concert.date).isBefore(new Date()))
+          .sort((a,b) => new Date(b.date) - new Date(a.date))
+          .map((concert) => (
                <div key={concert.id}>
                 <ConcertItem {...concert} />
              </div>
