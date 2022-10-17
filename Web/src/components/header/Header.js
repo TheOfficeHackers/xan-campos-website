@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import logo from "../../images/Xancamposlogo.png"
 
 function Header() {
   return (
     <div>
-      <div className="d-flex my-4">
+      <div className="d-flex my-4 header-text">
         <div
           className="offcanvas offcanvas-end d-flex align-items-end flex-column bgcolor text-end pe-3"
           data-bs-scroll="true"
@@ -70,14 +71,14 @@ function Header() {
           
         </div>
 
-        <div className="header-title text-danger">
-          <h3>XAN CAMPOS</h3>
+        <div className="header-title text-dark">
+          <img src={logo} alt="xan campos" style={{width:"70%"}}/>
         </div>
 
         {/* button */}
         <div className="ms-auto">
           <i
-            className="fa fa-bars text-danger fs-3"
+            className="fa fa-bars text-dark fs-3"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#demo"

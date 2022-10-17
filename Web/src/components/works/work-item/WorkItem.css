@@ -1,3 +1,23 @@
 .work-item {
   width: 100%;
 }
+
+.track:hover {
+  color:rgb(238, 4, 4);
+}
+
+.track .fa-play {
+  display: none;
+} 
+
+.track:hover .fa-play {
+  display: inline;
+}
+
+.disapear{
+  display: inline;
+}
+
+.disapear:hover {
+  display: none;
+}

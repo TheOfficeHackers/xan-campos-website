@@ -17,11 +17,16 @@ function ConcertsScreen() {
   return (
     <>
       <Header />
+      
+      <div className="container">
       <Section title="Concerts" icon="edit">
-      <button onClick={handleNextConcerts}>Next Concerts</button>
-      <button onClick={handlePastConcerts}>Past Concerts</button>
+      <div className="d-flex flex-column">
+      <span className="header-text fs-5 me-5" onClick={handleNextConcerts}>Next Concerts</span> 
+      <span className="header-text fs-5" onClick={handlePastConcerts}>Past Concerts</span>
+      </div>
       <div>{status ? <NextConcertList /> : <PastConcertsList />}</div>
       </Section>
+      </div>
     </>
   );
 }

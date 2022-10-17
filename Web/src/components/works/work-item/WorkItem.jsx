@@ -32,8 +32,8 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
       bar.style.width = `${(music.currentTime * 100) / music.duration}%`;
     };
 
-    console.log(music.currentTime)
-    console.log(music.duration)
+    console.log(music.currentTime);
+    console.log(music.duration);
 
     return () => {
       music?.pause();
@@ -43,23 +43,24 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
   const currentTrack =
     tracks.find((track) => track.previewUrl === audio) || tracks[0];
 
-  const releaseYear = releaseDate.slice(0,4);     
+  const releaseYear = releaseDate.slice(0, 4);
 
   return (
-    <div className="card my-5">
+    <div className="card my-5 py-4 mx-5 px-5" style={{ maxWidth: "1000px" }}>
       <div className="row g-0">
-        <div className="card col-md-4 my-2 ms-2 border-0">
-          <h2>{title} ({releaseYear})</h2>
+        <div className="card col-md-4 my-2 border-0">
+          <h4>
+            {title} ({releaseYear})
+          </h4>
         </div>
 
-        <div className="card mb-3" style={{ maxWidth: "540px" }}>
+        <div
+          className="card mb-3 border-0 ms-auto"
+          style={{ maxWidth: "600px" }}
+        >
           <div className="row g-0">
             <div className="col-md-4">
-              <img
-                src={cover.url}
-                className="img-fluid rounded-start"
-                alt={title}
-              />
+              <img src={cover.url} className="img-fluid" alt={title} />
             </div>
 
             <div className="col-md-8">
@@ -76,7 +77,8 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                     <button
                       className="btn"
                       onClick={() => {
-                        music?.play();
+                        music?.play()
+                    
                       }}
                     >
                       <i className="fa-solid fa-play"></i>
@@ -125,7 +127,10 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                     >
                       <i className="fa-solid fa-forward"></i>
                     </button>
-                    <div id="track-chrono">{music?.currentTime || "00:00"}/{trackDuration(currentTrack.durationMs)}</div>
+                    <div id="track-chrono">
+                      {music?.currentTime || "00:00"}/
+                      {trackDuration(currentTrack.durationMs)}
+                    </div>
                   </div>
 
                   <div className="progress" style={{ height: "5px" }}>
@@ -162,13 +167,17 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                           setAudio(track.previewUrl);
                         }}
                         className="d-flex justify-content-between my-2 me-2"
-                        
                       >
-                        <div>{trackPosition(track)}</div>
-                        <div>{track.title}</div>
+                        <div className="row col-12 track">
+                          <div className="col-2">
+                            <i class="fa fa-play"> </i>
+                            {trackPosition(track)}
+                          </div>
+                          <div className="col-8">{track.title}</div>
+                        </div>
                         <div>{trackDuration(track.durationMs)}</div>
                       </div>
-                      <hr className="text-muted m-0"></hr>
+                      <hr className="text-secondary m-0"></hr>
                     </div>
                   ))
                 : "Loading..."}
