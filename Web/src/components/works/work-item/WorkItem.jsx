@@ -81,7 +81,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                     
                       }}
                     >
-                      <i className="fa-solid fa-play"></i>
+                      <i className="fa-solid fa-play transition-red-btn fs-4"></i>
                     </button>
 
                     <button
@@ -90,7 +90,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                         music?.pause();
                       }}
                     >
-                      <i className="fa-solid fa-pause"></i>
+                      <i className="fa-solid fa-pause transition-red-btn"></i>
                     </button>
 
                     <button
@@ -106,7 +106,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                         }
                       }}
                     >
-                      <i className="fa-solid fa-backward"></i>
+                      <i className="fa-solid fa-backward-step transition-red-btn"></i>
                     </button>
 
                     <button
@@ -125,7 +125,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                         }
                       }}
                     >
-                      <i className="fa-solid fa-forward"></i>
+                      <i className="fa-solid fa-forward-step transition-red-btn"></i>
                     </button>
                     <div id="track-chrono">
                       {music?.currentTime || "00:00"}/
@@ -157,6 +157,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                 height: "10rem",
                 overflow: "scroll",
                 overflowX: "hidden",
+                cursor: "pointer",
               }}
             >
               {tracks
@@ -170,7 +171,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                       >
                         <div className="row col-12 track">
                           <div className="col-2">
-                            <i class="fa fa-play"> </i>
+                            <i class="fa fa-play play"> </i>
                             {trackPosition(track)}
                           </div>
                           <div className="col-8">{track.title}</div>

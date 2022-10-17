@@ -6,18 +6,19 @@
   color:rgb(238, 4, 4);
 }
 
-.track .fa-play {
+.track .play {
   display: none;
 } 
 
-.track:hover .fa-play {
+.track:hover .play {
   display: inline;
+  transition: 0.5s;
 }
 
-.disapear{
-  display: inline;
+
+
+.transition-red-btn:hover {
+  color:rgb(238, 4, 4);
+  transition: 0.3s;
 }
 
-.disapear:hover {
-  display: none;
-}
