@@ -5,8 +5,12 @@ const http = axios.create({
   withCredentials: true,
 });
 
-export function getWorks() {
-  return http.get("/works");
+export function getWorksXanTrio() {
+  return http.get("/worksXanTrio");
+};
+
+export function getWorksXan() {
+  return http.get("/worksXan");
 };
 
 export function getConcerts() {

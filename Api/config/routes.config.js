@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { concerts, auth, videos, works, colabos, message} = require('../controllers/');
+const { concerts, auth, videos, works, colabos, message } = require('../controllers/');
 const secure = require("../middleware/secure.mid");
 
 
@@ -18,7 +18,8 @@ router.delete('/colabos/:id', secure.isAuthenticated, colabos.delete);
 
 router.post('/message', message.create)
 
-router.get('/works', works.list);
+router.get('/worksXanTrio', works.listAlbumsXanTrio);
+router.get('/worksXan', works.listAlbumsXan);
 
 router.get("/profile", secure.isAuthenticated, auth.profile);
 router.post("/register", auth.register);

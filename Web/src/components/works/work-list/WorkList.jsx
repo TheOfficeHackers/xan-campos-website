@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { getWorks } from "../../../services/website-service";
+import { getWorksXanTrio, getWorksXan } from "../../../services/website-service";
 import WorkItem from "../work-item/WorkItem";
 
 function WorkList({ className }) {
-  const [works, setWorks] = useState(null);
+  const [worksXanTrio, setWorksXanTrio] = useState(null);
+  const [worksXan, setWorksXan] = useState(null);
 
   useEffect(() => {
-    getWorks()
-      .then((works) => setWorks(works.data))
+    getWorksXanTrio()
+      .then((worksXanTrio) => setWorksXanTrio(worksXanTrio.data))
       .catch((err) => console.error(err));
   }, []);
 
-  console.log(works);
+  useEffect(() => {
+    getWorksXan()
+      .then((worksXan) => setWorksXan(worksXan.data))
+      .catch((err) => console.error(err));
+  }, []);
+
+  console.log(worksXanTrio);
 
   return (
     <>
@@ -19,13 +26,22 @@ function WorkList({ className }) {
         <div className="text-danger display-3 mt-2 ">Leader</div>
       </div>
       <div className={className}>
-        {works
-          ? works.map((work) => (
+        {worksXanTrio
+          ? worksXanTrio.map((work) => (
               <div className="" key={work.id}>
                 <WorkItem {...work} />
               </div>
             ))
           : "Loading..."}
+      </div>
+      <div className={className}>
+        {worksXan
+          ? worksXan.filter((work) => work.title === "ESD").map((work) => (
+              <div className="" key={work.id}>
+                <WorkItem {...work} />
+              </div>
+            ))
+          : <></>}
       </div>
     </>
   );

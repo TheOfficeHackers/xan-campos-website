@@ -5,7 +5,7 @@ import logo from "../../images/Xancamposlogo.png"
 
 function Header() {
   return (
-    <div className="py-2 px-5 sticky-top">
+    <div className="py-2 px-5 fixed-top">
       <div className="d-flex my-4 header-text">
         <div
           className="offcanvas offcanvas-end d-flex align-items-end flex-column bgcolor text-end pe-3 "
