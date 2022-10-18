@@ -1,16 +1,13 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { createMessage } from "../../services/website-service";
 
 function ContactForm() {
-  const navigation = useNavigate();
 
   const {
     register,
     handleSubmit,
     setError,
-    control,
     reset,
     formState: { errors, isValid },
   } = useForm({ mode: "onTouched" });

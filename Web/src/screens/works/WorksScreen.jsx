@@ -9,7 +9,8 @@ function WorksScreen() {
     <>
       <Header />
       <CoverPicture src={xcnegative} />
-      <WorkList/>
+      <WorkList />
+      
       <ColabosList />
     </>
   );

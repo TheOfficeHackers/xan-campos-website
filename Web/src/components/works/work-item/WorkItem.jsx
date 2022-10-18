@@ -46,7 +46,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
   const releaseYear = releaseDate.slice(0, 4);
 
   return (
-    <div className="card py-4 px-5 my-3 bg-dark" style={{ maxWidth: "900px"}}>
+    <div className="card py-4 px-5 my-3 bg-dark" style={{ maxWidth: "900px", margin: "auto" }}>
       <div className="row g-0 text-light">
         <div className="card col-md-4 my-2 border-0 bg-dark">
           <h4>

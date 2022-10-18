@@ -5,10 +5,10 @@ import logo from "../../images/Xancamposlogo.png"
 
 function Header() {
   return (
-    <div className="py-2 px-5">
+    <div className="py-2 px-5 sticky-top">
       <div className="d-flex my-4 header-text">
         <div
-          className="offcanvas offcanvas-end d-flex align-items-end flex-column bgcolor text-end pe-3"
+          className="offcanvas offcanvas-end d-flex align-items-end flex-column bgcolor text-end pe-3 "
           data-bs-scroll="true"
           id="demo"
         >

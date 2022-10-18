@@ -17,7 +17,7 @@ function PastConcertsList() {
 
   return (
     <>
-      <div>
+      <div className="my-5">
       {
         concerts
           ? concerts.filter((concert) => moment(concert.date).isBefore(new Date()))

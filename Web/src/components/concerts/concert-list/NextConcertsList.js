@@ -16,7 +16,7 @@ function NextConcertList() {
 
   return (
     <>
-      <div>
+      <div className="my-5">
       {
         concerts
           ? concerts.filter((concert) => moment(concert.date).isSameOrAfter(new Date()))

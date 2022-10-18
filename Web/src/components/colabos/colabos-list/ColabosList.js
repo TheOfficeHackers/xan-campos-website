@@ -15,15 +15,20 @@ function ColabosList() {
   console.log(colabos)
 
   return (
-    <div className="">
+    <>
+    <div className="bgcolor" >
+    <div className="container">
+        <div className="text-light display-3 mt-2">Co-leader</div>
+      </div>
       {colabos
         ? colabos.map((colabo) => (
-            <div className="" key={colabo.id}>
+            <div key={colabo.id}>
               <ColaboItem {...colabo} />
             </div>
           ))
         : "Loading..."}
     </div>
+    </>
   );
 };
 

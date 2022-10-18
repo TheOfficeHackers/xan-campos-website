@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getWorks } from "../../../services/website-service";
 import WorkItem from "../work-item/WorkItem";
 
-function WorkList({className}) {
+function WorkList({ className }) {
   const [works, setWorks] = useState(null);
 
   useEffect(() => {
@@ -11,23 +11,28 @@ function WorkList({className}) {
       .catch((err) => console.error(err));
   }, []);
 
-  console.log(works)
+  console.log(works);
 
   return (
-    <div className={className}>
-      {works
-        ? works.map((work) => (
-            <div className="" key={work.id}>
-              <WorkItem {...work} />
-            </div>
-          ))
-        : "Loading..."}
-    </div>
+    <>
+      <div className="container">
+        <div className="text-danger display-3 mt-2 ">Leader</div>
+      </div>
+      <div className={className}>
+        {works
+          ? works.map((work) => (
+              <div className="" key={work.id}>
+                <WorkItem {...work} />
+              </div>
+            ))
+          : "Loading..."}
+      </div>
+    </>
   );
-};
+}
 
 WorkList.defaultProps = {
-  className: '',
-}
+  className: "",
+};
 
 export default WorkList;
