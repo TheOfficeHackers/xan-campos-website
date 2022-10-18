@@ -1,11 +1,12 @@
 import React from 'react'
 import { Header } from '../../components'
+import Footer from '../../components/footer/Footer'
 
 function HomeScreen() {
   return (
     <>
       <Header />
-      <div>Home</div>
+      <Footer />
     </>
   )
 }
