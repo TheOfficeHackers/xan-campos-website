@@ -30,6 +30,8 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
     music.ontimeupdate = () => {
       const bar = document.getElementById("progress-bar");
       bar.style.width = `${(music.currentTime * 100) / music.duration}%`;
+      const trackProgress = document.getElementById("track-progress");
+      trackProgress.innerText = `${(music.currentTime)}%`; 
     };
 
     console.log(music.currentTime);
@@ -77,7 +79,11 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                     <button
                       className="btn"
                       onClick={() => {
-                        music?.play()
+                        if (!music) {
+                          setAudio(tracks[0].previewUrl)
+                        } else {
+                          music?.play()
+                        } 
                     
                       }}
                     >
@@ -128,7 +134,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
                       <i className="fa-solid fa-forward-step transition-red-btn text-light"></i>
                     </button>
                     <div id="track-chrono">
-                      {music?.currentTime || "00:00"}/
+                      <span id="track-progress">00:00</span>/
                       {trackDuration(currentTrack.durationMs)}
                     </div>
                   </div>

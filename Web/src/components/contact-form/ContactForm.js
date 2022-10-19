@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { createMessage } from "../../services/website-service";
+import "../contact-form/ContactForm.css"
 
 function ContactForm() {
 
@@ -33,11 +34,11 @@ function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(handleCreateMessageSubmit)}>
-      <div className="container p-5 bg-secondary">
+      <div className="form-card container p-5">
 
-        <div className="input-group mb-1">
-          <span className="input-group-text">
-            <i className="fa fa-user-circle fa-fw"></i>
+        <div className=" input-group mb-1">
+          <span className="form-input-logo input-group-text">
+            Name
           </span>
           <input
             type="text"
@@ -54,8 +55,8 @@ function ContactForm() {
         </div>
 
         <div className="input-group mb-1">
-          <span className="input-group-text">
-            <i className="fa fa-envelope fa-fw"></i>
+        <span className="form-input-logo input-group-text">
+            Email
           </span>
           <input
             type="text"
@@ -68,9 +69,11 @@ function ContactForm() {
           {errors.email && (
             <div className="invalid-feedback">{errors.email.message}</div>
           )}
-      
-          <span className="input-group-text">
-            <i className="fa fa-phone fa-fw"></i>
+          </div>
+
+          <div className="input-group mb-1">
+      <span className="form-input-logo input-group-text">
+            Phone
           </span>
           <input
             type="text"
@@ -84,11 +87,12 @@ function ContactForm() {
         </div>
 
         <div className="input-group mb-1">
-          <span className="input-group-text">
-            <i className="fa fa-comment fa-fw"></i>
+        <span className="form-input-logo input-group-text">
+            Comment
           </span>
           <textarea
             className="form-control"
+            placeholder="Your comment"
             {...register("message", {
               required: "Message is required",
               maxLength: { value: 500, message: "Your message is too long" },
@@ -100,8 +104,8 @@ function ContactForm() {
         </div>
 
         <div className="d-grid mt-3">
-          <button className="btn btn-primary" type="submit">
-            Send message
+          <button className=" form-button btn btn-dark" type="submit">
+            SEND MESSAGE
           </button>
         </div>
       </div>
