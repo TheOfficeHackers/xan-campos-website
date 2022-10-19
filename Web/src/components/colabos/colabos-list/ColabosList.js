@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { getColabos } from "../../../services/website-service";
 import ColaboItem from "../colabo-item/ColaboItem";
 
-
 function ColabosList() {
   const [colabos, setColabos] = useState(null);
 
@@ -12,24 +11,27 @@ function ColabosList() {
       .catch((err) => console.error(err));
   }, []);
 
-  console.log(colabos)
+  console.log(colabos);
 
   return (
     <>
-    <div className="bgcolor" >
-    <div className="container">
-        <div className="text-light display-3 mt-2">Co-leader</div>
-      </div>
-      {colabos
-        ? colabos.map((colabo) => (
-            <div key={colabo.id}>
-              <ColaboItem {...colabo} />
+      <div className="bgcolor">
+        
+          <div className=" bg-primary">
+            <div className="text-light display-3 mt-2">Co-leader</div>
+          </div>
+          <div>
+          {colabos
+            ? colabos.map((colabo) => (
+                <div key={colabo.id}>
+                  <ColaboItem {...colabo} />
+                </div>
+              ))
+            : "Loading..."}
             </div>
-          ))
-        : "Loading..."}
-    </div>
+      </div>
     </>
   );
-};
+}
 
 export default ColabosList;

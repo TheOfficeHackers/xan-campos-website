@@ -10,11 +10,10 @@ function ColaboItem({
   recordLabel,
 }) {
   return (
-    <div className=" p-5">
-      <div
-        className="card border-0 rounded-0 bo text-light bg-dark"
-        style={{ width: "18rem", height: "35rem" }}
-      >
+    <div className="container">
+    
+    <div className="col-6">
+      <div className="card border-0 rounded-0 text-light bg-dark">
         <img src={cover} className="card-img-top rounded-0" alt={title} />
         <div className="card-body">
           <h5 className="card-title fw-bold">
@@ -30,6 +29,8 @@ function ColaboItem({
             <li></li>
           )}
         </div>
+      </div>
+    
       </div>
     </div>
   );

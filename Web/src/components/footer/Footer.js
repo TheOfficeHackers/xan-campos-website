@@ -1,12 +1,14 @@
 import React from "react";
 import footerpic from "../../images/footer.png";
+import "./Footer.css" 
 
 function Footer() {
   return (
-    <div className="position-relative">
-      <img src={footerpic} alt="footer"  style={{width: "100%" }}/>
-      <div className="text-center text-light fs-2 position-absolute top-50 start-50 translate-middle">
-        <div className="mb-3">
+    <>
+      
+      <div className="footer">
+      <div className="background-footer footer ">
+        <div className="footer-text text-center mb-5">
           <span> Join the Newsletter </span>
           <br />
           <span className="fs-6"> & stay in touch with Xan Campos</span>
@@ -15,8 +17,15 @@ function Footer() {
           <input className="border-0" type="text" />
           <input class="btn btn-dark rounded-0" type="button" value="Join" />
         </div>
+        <div>
+          <i className="fa-brands fa-facebook-f fs-3 text-light social-footer mx-2"></i>
+          <i className="fa-brands fa-twitter fs-3 text-light social-footer mx-2"></i>
+          <i className="fa-brands fa-youtube fs-3 text-light social-footer mx-2"></i>
+          <i className="fa-brands fa-instagram fs-3 text-light social-footer mx-2"></i>
+        </div>
       </div>
     </div>
+    </>
   );
 }
 

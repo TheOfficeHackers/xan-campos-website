@@ -157,15 +157,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
 
           <div className="card border-0 ms-2 me-2 bg-dark">
             <h5 className="card-title mt-3">Tracklist</h5>
-            <div className="track-list"
-              // style={{
-              //   width: "10",
-              //   height: "10rem",
-              //   overflow: "scroll",
-              //   overflowX: "hidden",
-              //   cursor: "pointer",
-              // }}
-            >
+            <div className="track-list">
               {tracks
                 ? tracks.map((track) => (
                     <div key={track.id}>
@@ -194,39 +186,7 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
       </div>
     </div>
 
-    // <div className="row row-cols-12 row-cols-sm-6 row-cols-md-3 my-3">
-    //   <div>
-    //     <h4>{title}</h4>
-    //     <h5>{artists[0].name}</h5>
-    //   </div>
 
-    //   <div>
-    //     <div>
-    //       <img
-    //         src={cover.url}
-    //         alt={title}
-    //         style={{ height: 300, width: 300 }}
-    //       />
-    //     </div>
-    //     <div>
-    //       {tracks
-    //         ? tracks.map((track) => (
-    //             <div
-    //               className="d-flex row justify-content-between"
-    //               key={track.id}
-    //             >
-    //               <div className="">{trackPosition(track)}</div>
-    //               <div className="">{track.title}</div>
-    //               <div className="">{trackDuration(track.durationMs)}</div>
-    //               <audio className="" controls>
-    //                 <source src={track.previewUrl} type="audio/mpeg" />
-    //               </audio>
-    //             </div>
-    //           ))
-    //         : "Loading..."}
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
 
