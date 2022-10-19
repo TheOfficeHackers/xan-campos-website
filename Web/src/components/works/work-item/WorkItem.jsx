@@ -151,14 +151,14 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
 
           <div className="card border-0 ms-2 me-2 bg-dark">
             <h5 className="card-title mt-3">Tracklist</h5>
-            <div
-              style={{
-                width: "10",
-                height: "10rem",
-                overflow: "scroll",
-                overflowX: "hidden",
-                cursor: "pointer",
-              }}
+            <div className="track-list"
+              // style={{
+              //   width: "10",
+              //   height: "10rem",
+              //   overflow: "scroll",
+              //   overflowX: "hidden",
+              //   cursor: "pointer",
+              // }}
             >
               {tracks
                 ? tracks.map((track) => (
