@@ -11,7 +11,7 @@ const isURL = (value) => {
   }
 };
 
-const colaboSchema = new Schema({
+const sidemanSchema = new Schema({
   title: {
     type: String,
   },
@@ -52,5 +52,5 @@ const colaboSchema = new Schema({
 }
 );
 
-const Colabo = mongoose.model("Colabo", colaboSchema);
-module.exports = Colabo;
+const Sideman = mongoose.model("Sideman", sidemanSchema);
+module.exports = Sideman;

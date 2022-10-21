@@ -21,6 +21,10 @@ export function getColabos() {
   return http.get("/colabos")
 };
 
+export function getSideman() {
+  return http.get("/sideman")
+};
+
 export function getVideos() {
   return http.get("/videos")
 };

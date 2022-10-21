@@ -15,12 +15,8 @@ function ColabosList() {
 
   return (
     <>
-      <div className="bgcolor">
-        
-          <div className=" bg-primary">
-            <div className="text-light display-3 mt-2">Co-leader</div>
-          </div>
-          <div>
+      <div className="row">
+        <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
           {colabos
             ? colabos.map((colabo) => (
                 <div key={colabo.id}>
@@ -28,7 +24,7 @@ function ColabosList() {
                 </div>
               ))
             : "Loading..."}
-            </div>
+        </div>
       </div>
     </>
   );
