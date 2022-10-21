@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getWorksXanTrio, getWorksXan } from "../../../services/website-service";
 import WorkItem from "../work-item/WorkItem";
+import "./WorkList.css";
 
 function WorkList({ className }) {
   const [worksXanTrio, setWorksXanTrio] = useState(null);
@@ -21,10 +22,11 @@ function WorkList({ className }) {
   console.log(worksXanTrio);
 
   return (
-    <>
+    <div className="works-list">
       <div className="container">
-        <div className="text-danger display-3 mt-2 ">Leader</div>
+        <div className="text-danger display-3 mt-0 ">Leader</div>
       </div>
+
       <div className={className}>
         {worksXanTrio
           ? worksXanTrio.map((work) => (
@@ -34,6 +36,7 @@ function WorkList({ className }) {
             ))
           : "Loading..."}
       </div>
+
       <div className={className}>
         {worksXan
           ? worksXan.filter((work) => work.title === "ESD").map((work) => (
@@ -43,7 +46,7 @@ function WorkList({ className }) {
             ))
           : <></>}
       </div>
-    </>
+    </div>
   );
 }
 
