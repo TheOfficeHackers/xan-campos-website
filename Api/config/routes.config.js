@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { concerts, auth, videos, works, colabos, message, sideman } = require('../controllers/');
 const secure = require("../middleware/secure.mid");
+const upload = require("./multer.config");
 
 
 router.get('/concerts', concerts.list);
