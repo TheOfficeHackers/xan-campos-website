@@ -10,10 +10,7 @@ function SidemanItem({
   recordLabel,
 }) {
   return (
-    <div className="container">
-    
-    <div className="col-6">
-      <div className="card border-0 rounded-0 text-light bg-dark">
+      <div className="card border-0 rounded-0 text-light bg-dark mb-3" style={{height:"655px"}}>
         <img src={cover} className="card-img-top rounded-0" alt={title} />
         <div className="card-body">
           <h5 className="card-title fw-bold">
@@ -30,10 +27,7 @@ function SidemanItem({
           )}
         </div>
       </div>
-    
-      </div>
-    </div>
   );
-}
+};
 
 export default SidemanItem;

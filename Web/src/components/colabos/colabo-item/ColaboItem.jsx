@@ -9,15 +9,12 @@ function ColaboItem({
   cover,
   recordLabel,
 }) {
-  return (
-    <div className="container">
-    
-    <div className="col-6">
-      <div className="card border-0 rounded-0 text-light bg-dark">
+  return (   
+      <div className="card border-0 rounded-0 text-light bg-dark" style={{height:"675px"}}>
         <img src={cover} className="card-img-top rounded-0" alt={title} />
         <div className="card-body">
           <h5 className="card-title fw-bold">
-            {title}({releaseYear})
+            {title} ({releaseYear})
           </h5>
           <h6 className="text-secondary">{mainArtist}</h6>
           <h6>{recordLabel}</h6>
@@ -30,10 +27,7 @@ function ColaboItem({
           )}
         </div>
       </div>
-    
-      </div>
-    </div>
   );
-}
+};
 
 export default ColaboItem;

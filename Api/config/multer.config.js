@@ -5,7 +5,7 @@ const multer = require('multer');
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
-    folder: 'xan-campos-web-imgs',
+    folder: 'xan-campos-web',
   },
 });
  

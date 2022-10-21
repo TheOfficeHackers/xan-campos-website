@@ -4,30 +4,28 @@ import SidemanItem from "../sideman-item/SidemanItem"
 
 
 function SidemanList() {
-  const [sidemanworks, setSidemanWorks] = useState(null);
+  const [sidemanWorks, setSidemanWorks] = useState(null);
 
   useEffect(() => {
     getSideman()
-      .then((sidemanworks) => setSidemanWorks(sidemanworks.data))
+      .then((sidemanWorks) => setSidemanWorks(sidemanWorks.data))
       .catch((err) => console.error(err));
   }, []);
 
 
 
   return (
-    <>
+    <div className="container mb-5">
       <div className="row">
-        <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          {sidemanworks
-            ? sidemanworks.map((sidemanwork) => (
-                <div key={sidemanwork.id}>
-                  <SidemanItem {...sidemanwork} />
+          {sidemanWorks
+            ? sidemanWorks.map((sidemanWork) => (
+                <div key={sidemanWork.id} className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                  <SidemanItem {...sidemanWork} />
                 </div>
               ))
             : "Loading..."}
         </div>
       </div>
-    </>
   );
 }
 

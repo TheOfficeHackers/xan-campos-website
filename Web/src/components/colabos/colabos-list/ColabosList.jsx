@@ -14,19 +14,17 @@ function ColabosList() {
   console.log(colabos);
 
   return (
-    <>
+    <div className="container mb-5">
       <div className="row">
-        <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
           {colabos
             ? colabos.map((colabo) => (
-                <div key={colabo.id}>
+                <div key={colabo.id} className="col-lg-3 col-md-6 mb-4 mb-lg-0">
                   <ColaboItem {...colabo} />
                 </div>
               ))
             : "Loading..."}
-        </div>
       </div>
-    </>
+    </div>
   );
 }
 
