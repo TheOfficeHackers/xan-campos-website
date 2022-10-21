@@ -23,6 +23,10 @@ function Footer() {
           <i className="fa-brands fa-youtube fs-3 text-light social-footer mx-2"></i>
           <i className="fa-brands fa-instagram fs-3 text-light social-footer mx-2"></i>
         </div>
+        <div className="footer-text mt-5 m">
+          Website made by The Office Hackers:
+          <a href="https://github.com/marialalin" className="text-decoration-none footer-text"> María Vence</a> & <a href="https://github.com/Lechuza7" className="text-decoration-none footer-text">Marc Cuesta</a>.
+        </div>
       </div>
     </div>
     </>
