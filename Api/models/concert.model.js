@@ -33,6 +33,9 @@ const concertSchema = new Schema(
     },
     city: {
       type: String,
+      required: true,
+      trim: true,
+      maxLength: [50, "Venue's name is too long"]
     },
     country: {
       type: String,

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { CoverPicture, AdminAuthForm } from '../../components'
 
 function AdminAuthScreen() {

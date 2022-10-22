@@ -35,4 +35,16 @@ export function authenticate(data) {
 
 export function createMessage(message) {
   return http.post("/message", message)
-}
+};
+
+export function createConcert(concert) {
+  return http.post("/concerts", concert)
+};
+
+export function createColabo(colabo) {
+  return http.post("/colabo", colabo)
+};
+
+export function createSideman(sideman) {
+  return http.post("/sideman", sideman)
+};
