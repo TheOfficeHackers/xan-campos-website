@@ -8,7 +8,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/concerts/*" element={<ConcertsScreen />} />
-          <Route path="/discography" element={<WorksScreen />} />
+          <Route path="/works" element={<WorksScreen />} />
           <Route path="/videos" element={<VideosScreen />} />
           <Route path="/contact" element={<ContactScreen />} />
           <Route path="/admin/auth" element={<AdminAuthScreen />} />

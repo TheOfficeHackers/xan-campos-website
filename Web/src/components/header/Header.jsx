@@ -29,10 +29,10 @@ function Header() {
                 </li>
                 <li>
                   <Link
-                    to="/discography"
+                    to="/works"
                     className="text-decoration-none text-light fs-2"
                   >
-                    <p>DISCOGRAPHY</p>
+                    <p>WORKS</p>
                   </Link>
                 </li>
                 <li >
@@ -40,7 +40,7 @@ function Header() {
                     to="/concerts"
                     className="text-decoration-none text-light fs-2"
                   >
-                    <p>NEXT CONCERTS</p>
+                    <p>CONCERTS</p>
                   </Link>
                 </li>
                 <li >
