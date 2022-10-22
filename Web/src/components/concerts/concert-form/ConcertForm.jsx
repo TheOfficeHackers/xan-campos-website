@@ -12,7 +12,7 @@ function ConcertForm() {
     formState: { errors, isValid },
   } = useForm({ mode: "onTouched" });
 
-  const handleCreateMessageSubmit = (data, e) => {
+  const handleCreateConcertSubmit = (data, e) => {
     console.log(data);
     createConcert(data)
       .then((concert) => {
@@ -32,8 +32,8 @@ function ConcertForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleCreateMessageSubmit)}>
-      <div className="form-card container p-5">
+    <form onSubmit={handleSubmit(handleCreateConcertSubmit)}>
+      <div className="concert-card container p-5">
         <div className="input-group mb-1">
           <span className="form-input-logo input-group-text">Date</span>
           <input
@@ -137,7 +137,7 @@ function ConcertForm() {
         </div>
 
         <div className="d-grid mt-3">
-          <button className="form-button btn btn-dark" type="submit">
+          <button className="form-button btn btn-dark" type="submit" disabled={!isValid}>
             CREATE CONCERT
           </button>
         </div>

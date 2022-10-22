@@ -1,41 +1,43 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
-const isURL = (value) => {
-  try {
-    new URL(value);
-    return true;
-  } catch (error) {
-    return false;
-  }
-};
-
 const sidemanSchema = new Schema({
   title: {
     type: String,
+    required: true,
+    trim: true,
+    maxLength: [150, "Title is too long"]
   },
   mainArtist: {
     type: String,
+    required: true,
+    trim: true,
+    maxLength: [75, "Main artist's name is too long"]
   },
   project: {
     type: String,
+    trim: true,
+    maxLength: [150, "Project's name is too long"]
   },
   musicians: {
     type: [String],
   },
   releaseYear: {
     type: String,
+    required: true,
+    trim: true,
+    maxLength: [4, "Release year is too long"]
   },
   cover: {
     type: String,
-    validate: {
-      validator: isURL,
-      message: "URL is not valid",
-    },
+    required: true,
+    trim: true,
   },
   recordLabel: {
-    type: String
+    type: String,
+    required: true,
+    trim: true,
+    maxLength: [50, "Record label name is too long"]
   },
 },
 {

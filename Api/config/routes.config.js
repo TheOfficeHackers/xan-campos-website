@@ -14,11 +14,11 @@ router.post('/videos', secure.isAuthenticated, videos.create);
 router.delete('/videos/:id', secure.isAuthenticated, videos.delete);
 
 router.get('/colabos', colabos.list);
-router.post('/colabos', secure.isAuthenticated, colabos.create);
+router.post('/colabos', secure.isAuthenticated, upload.single('cover'), colabos.create);
 router.delete('/colabos/:id', secure.isAuthenticated, colabos.delete);
 
 router.get('/sideman', sideman.list);
-router.post('/sideman', secure.isAuthenticated, sideman.create);
+router.post('/sideman', secure.isAuthenticated, upload.single('cover'), sideman.create);
 router.delete('/sideman/:id', secure.isAuthenticated, sideman.delete);
 
 router.post('/message', message.create)

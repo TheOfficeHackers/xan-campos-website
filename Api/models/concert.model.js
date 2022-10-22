@@ -35,7 +35,7 @@ const concertSchema = new Schema(
       type: String,
       required: true,
       trim: true,
-      maxLength: [50, "Venue's name is too long"]
+      maxLength: [50, "City's name is too long"]
     },
     country: {
       type: String,

@@ -5,6 +5,7 @@ const multer = require('multer');
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
+    allowed_formats: ['jpg', 'png'],
     folder: 'xan-campos-web',
   },
 });

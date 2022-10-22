@@ -7,10 +7,12 @@ export { default as NextConcertList } from "./concerts/concert-list/NextConcerts
 export { default as PastConcertsList } from "./concerts/concert-list/PastConcertsList";
 export { default as ColabosList } from "./colabos/colabos-list/ColabosList";
 export { default as ColaboItem } from "./colabos/colabo-item/ColaboItem";
+export { default as ColaboForm } from "./colabos/colabo-form/ColaboForm";
 export { default as VideoList } from "./video/video-list/VideoList";
 export { default as VideoItem } from "./video/video-item/VideoItem";
 export { default as SidemanItem } from "./sideman/sideman-item/SidemanItem";
 export { default as SidemanList } from "./sideman/sideman-list/SidemanList";
+export { default as SidemanForm } from "./sideman/sideman-form/SidemanForm";
 export { default as ContactForm } from "./contact-form/ContactForm";
 export { default as CoverPicture } from "./cover-picture/CoverPicture";
 export { default as Footer } from "./footer/Footer";

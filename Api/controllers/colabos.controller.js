@@ -2,6 +2,7 @@ const { Colabo } = require("../models");
 
 module.exports.create = (req, res, next) => {
   const colabo = req.body;
+  colabo.cover = req.file.path;
 
   Colabo.create(colabo)
     .then((colabo) => res.status(201).json(colabo))

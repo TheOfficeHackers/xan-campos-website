@@ -42,9 +42,23 @@ export function createConcert(concert) {
 };
 
 export function createColabo(colabo) {
-  return http.post("/colabo", colabo)
+  colabo.cover = colabo.cover[0]
+  const data = new FormData()
+  
+  Object.keys(colabo).forEach(key => {
+    data.append(key, colabo[key])
+  })
+
+  return http.post("/colabos", data)
 };
 
 export function createSideman(sideman) {
+  sideman.cover = sideman.cover[0]
+  const data = new FormData()
+  
+  Object.keys(sideman).forEach(key => {
+    data.append(key, sideman[key])
+  })
+
   return http.post("/sideman", sideman)
 };
