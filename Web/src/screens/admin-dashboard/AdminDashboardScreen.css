@@ -1,0 +1,23 @@
+.create-concert-label {
+  color: rgba(243, 239, 214);
+}
+
+.create-concert-label:hover {
+  text-decoration: underline;
+}
+
+.create-colabo-label {
+  color: rgba(214, 118, 115);
+}
+
+.create-colabo-label:hover {
+  text-decoration: underline;
+}
+
+.create-sideman-label {
+  color: rgba(134, 180, 183);
+}
+
+.create-sideman-label:hover {
+  text-decoration: underline;
+}
