@@ -14,10 +14,10 @@ export default function ConcertItem({
     
     <div className="card border-0 my-3 t-3">
     
-      <div className="text-danger fw-bold ">
+      <div className="text-danger fw-bold" >
         {moment(date).format("MMM DD")}, {hour}h.
       </div>
-      <div className="fw-bold ">{band} </div>
+      <div className="fw-bold">{band} </div>
       <div className="text-secondary fw-bold">
         {event} @ {venue}, {city}
       </div>
