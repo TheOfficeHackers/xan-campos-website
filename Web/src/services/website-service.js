@@ -29,6 +29,10 @@ export function getVideos() {
   return http.get("/videos")
 };
 
+export function authenticate(data) {
+  return http.post("/authenticate", data);
+};
+
 export function createMessage(message) {
   return http.post("/message", message)
 }

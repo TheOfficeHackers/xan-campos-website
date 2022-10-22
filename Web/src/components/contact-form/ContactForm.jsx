@@ -36,7 +36,7 @@ function ContactForm() {
     <form onSubmit={handleSubmit(handleCreateMessageSubmit)}>
       <div className="form-card container p-5">
 
-        <div className=" input-group mb-1">
+        <div className="input-group mb-1">
           <span className="form-input-logo input-group-text">
             Name
           </span>
@@ -59,6 +59,7 @@ function ContactForm() {
             Email
           </span>
           <input
+
             type="text"
             className={`form-control ${errors.email ? "is-invalid" : ""}`}
             placeholder="Your email"
@@ -104,7 +105,7 @@ function ContactForm() {
         </div>
 
         <div className="d-grid mt-3">
-          <button className=" form-button btn btn-dark" type="submit">
+          <button className="form-button btn btn-dark" type="submit">
             SEND MESSAGE
           </button>
         </div>

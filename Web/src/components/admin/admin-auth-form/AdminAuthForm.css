@@ -1,0 +1,26 @@
+.login {
+  background-image: url("https://res.cloudinary.com/dyl3cklgp/image/upload/v1666426864/xan-campos-web/oy2RiG_py2pj8.webp");
+  
+}
+
+.login-card {
+  background-color: rgba(2,2,2,0.5);
+  border-radius: 0.3rem;
+  width: 45rem;
+}
+
+.form-input-logo {
+  background-color: rgba(2,2,2,0.4);
+  border: none;
+  color: white;
+  font-family: 'Zen Dots', cursive;
+  width: 8rem;
+}
+
+.form-input-icon {
+  background-color: white;
+}
+
+.form-button {
+  font-family: 'Zen Dots', cursive;
+}
