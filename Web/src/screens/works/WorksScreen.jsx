@@ -11,9 +11,9 @@ function WorksScreen() {
       <Header />
       <CoverPicture src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666366628/xan-campos-web/cover-works_ct7xqm.png" />
       <WorkList />
+      <SidemanList /> 
       <ColabosList />
       <hr></hr> 
-      <SidemanList /> 
       <Footer />
     </>
   );
