@@ -16,6 +16,4 @@ export { default as SidemanForm } from "./sideman/sideman-form/SidemanForm";
 export { default as ContactForm } from "./contact-form/ContactForm";
 export { default as CoverPicture } from "./cover-picture/CoverPicture";
 export { default as Footer } from "./footer/Footer";
-export { default as Section } from "./section/Section";
-export { default as Bio } from "./bio/Bio";
 export { default as AdminAuthForm } from "./admin/admin-auth-form/AdminAuthForm";

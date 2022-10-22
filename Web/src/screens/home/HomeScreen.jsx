@@ -6,6 +6,7 @@ import Bio from '../../components/bio/Bio'
 import NextConcertsHome from '../../components/next-concerts-home/NextConcertsHome'
 import WorksHome from '../../components/works-home/WorksHome'
 import VideosHome from '../../components/videos-home/VideosHome'
+import AutoplayVideoHome from '../../components/autoplay-video-home/AutoplayVideoHome'
 
 function HomeScreen() {
   return (
@@ -16,6 +17,7 @@ function HomeScreen() {
       <NextConcertsHome />
       <WorksHome />
       <VideosHome />
+      <AutoplayVideoHome />
       <Footer />
     </>
   )
