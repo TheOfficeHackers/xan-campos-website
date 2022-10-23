@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header, VideoList } from '../../components'
 import Footer from '../../components/footer/Footer'
-import videopic from "../../images/cover-video2.png"
+
 
 function VideosScreen() {
   return (
