@@ -7,19 +7,8 @@ function VideosScreen() {
   return (
     <>
       <Header />
-      <img src={videopic} alt="xan-campos" style={{width:"100%"}}/>
-      <h2
-      className="header-text"
-      style={{
-        position: "absolute",
-        fontSize: "10rem",
-        color: "white",
-        top: "470px",
-        left: "100px",
-      }}
-    >
-      VIDEOS
-    </h2> 
+      <img src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666521092/xan-campos-web/cover-videos2_ndbbho.png" alt="xan-campos" style={{width:"100%"}}/>
+     
       <VideoList />
       <Footer />
     </>

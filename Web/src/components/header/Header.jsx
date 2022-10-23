@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import logo from "../../images/Xancamposlogo.png"
+
 
 function Header() {
   return (
@@ -72,7 +72,7 @@ function Header() {
         </div>
 
         <div className="header-title text-dark">
-          <img src={logo} alt="xan campos" style={{width:"70%"}}/>
+          <div className="fs-3">XANCAMPOS</div>
         </div>
 
         {/* button */}
