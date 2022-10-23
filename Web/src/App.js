@@ -11,7 +11,7 @@ function App() {
           <Route path="/works" element={<WorksScreen />} />
           <Route path="/videos" element={<VideosScreen />} />
           <Route path="/contact" element={<ContactScreen />} />
-          <Route path="/admin/auth" element={<AdminAuthScreen />} />
+          <Route path="/admin/login" element={<AdminAuthScreen />} />
           <Route path="/admin/dashboard" element={<AdminDashboardScreen />} />
           <Route path="*" element={<ErrorsScreen />} />
         </Routes>
