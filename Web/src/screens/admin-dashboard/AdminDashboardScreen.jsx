@@ -25,7 +25,7 @@ function AdminDashboardScreen() {
 
   return (
     <>
-      <CoverPicture src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666434490/xan-campos-web/179601_psavls.jpg" />
+      <CoverPicture src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666542624/xan-campos-web/dashboard-cover_cdqiph.png" />
 
       <div className="position-absolute top-50 start-50 translate-middle">
         <div className= "d-flex justify-content-between mb-2">

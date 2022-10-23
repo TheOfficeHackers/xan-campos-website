@@ -33,6 +33,9 @@ function VideoList() {
         <Carousel
           renderItem={customRenderItem}
           renderThumbs={customRenderThumb}
+          showArrows={true}
+          showStatus={false}
+
         >
           <YoutubeSlide
             key="youtube-1"
@@ -79,7 +82,8 @@ function VideoList() {
 
       <Section text="Sideman / Co-leader"/>
       <div className="container" style={{maxWidth:"1000px"}}>
-      <Carousel renderItem={customRenderItem} renderThumbs={customRenderThumb}>
+      <Carousel renderItem={customRenderItem} renderThumbs={customRenderThumb} showArrows={true}
+          showStatus={false} >
         <YoutubeSlide
           key="youtube-1"
           url="https://www.youtube.com/embed/4RSPeUlqFFc"
@@ -105,7 +109,8 @@ function VideoList() {
 
       <Section text="Collaborations"/>
       <div className="container" style={{maxWidth:"1000px"}}>
-      <Carousel renderItem={customRenderItem} renderThumbs={customRenderThumb}>
+      <Carousel renderItem={customRenderItem} renderThumbs={customRenderThumb} showArrows={true}
+          showStatus={false} >
         <YoutubeSlide
           key="youtube-1"
           url="https://www.youtube.com/embed/FWO0OjDYsBw"
