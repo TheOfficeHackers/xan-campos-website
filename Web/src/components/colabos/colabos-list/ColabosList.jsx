@@ -16,7 +16,7 @@ function ColabosList() {
 
   return (
     <div className="colabos-list">
-    <div className="container pt-4 pb-4 colabos-list">
+    <div className="container pt-4 pb-5 colabos-list">
       <div className="row">
           {colabos
             ? colabos.map((colabo) => (

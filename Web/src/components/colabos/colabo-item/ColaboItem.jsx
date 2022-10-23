@@ -10,7 +10,7 @@ function ColaboItem({
   recordLabel,
 }) {
   return (   
-      <div className="card border-0 rounded-0 text-light bg-dark" style={{height:"675px"}}>
+      <div className="card border-0 rounded-0 text-light bg-dark mb-3" style={{height:"675px"}}>
         <img src={cover} className="card-img-top rounded-0" alt={title} />
         <div className="card-body">
           <h5 className="card-title fw-bold">

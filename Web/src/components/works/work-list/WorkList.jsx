@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getWorksXanTrio, getWorksXan } from "../../../services/website-service";
 import WorkItem from "../work-item/WorkItem";
-import "./WorkList.css";
+
 
 function WorkList({ className }) {
   const [worksXanTrio, setWorksXanTrio] = useState(null);
@@ -23,11 +23,6 @@ function WorkList({ className }) {
 
   return (
     <div>
-      <div className="container">
-        <div className="section-leader display-3 mt-3 ">Leader</div>
-        <span className="span-leader" style={{width:"100px"}}></span>
-      </div>
-
       <div className={className}>
         {worksXanTrio
           ? worksXanTrio.map((work) => (

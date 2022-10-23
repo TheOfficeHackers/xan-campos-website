@@ -17,7 +17,7 @@ function SidemanList() {
 
   return (
     <div className="sideman-list">
-    <div className="container pt-3 pb-2 sideman-list">
+    <div className="container pt-3 pb-4 sideman-list">
       <div className="row">
           {sidemanWorks
             ? sidemanWorks.map((sidemanWork) => (

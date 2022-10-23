@@ -1,14 +1,13 @@
 import React from 'react';
+import "../section/Section.css";
 
-function Section({ className, title, icon, children }) {
+function Section({ className, text }) {
   return (
     <section className={className}>
-      <h1 className='m-0 fs-3 text-danger'>
-        {icon && <i className={`fa fa-${icon} me-1`} />}
-        {title}
-      </h1>
-      <hr className='mt-0'/>
-      {children}
+      <div className="container">
+        <div className="section-main display-3 pt-2">{text}</div>
+        <p className="section-line m-0" style={{width:"500px"}}></p>
+      </div>
     </section>
   );
 };

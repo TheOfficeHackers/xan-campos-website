@@ -1,0 +1,9 @@
+.section-main {
+  color: red;
+}
+
+.section-line {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: red;
+}
