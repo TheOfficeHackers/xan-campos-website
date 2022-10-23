@@ -1,9 +1,7 @@
-import React from "react";
-import { useState } from "react";
-import { PastConcertsList, NextConcertList, Header } from "../../components";
-import CoverPicture from "../../components/cover-picture/CoverPicture";
-import Footer from "../../components/footer/Footer";
+import React, { useState } from "react";
+import { PastConcertsList, NextConcertList, Header, Footer } from "../../components";
 import concertpic from "../../images/xct-concert.jpg"
+
 
 function ConcertsScreen() {
   const [status, setStatus] = useState(true);
@@ -35,8 +33,8 @@ function ConcertsScreen() {
       
       <div className="container">
       <div className="d-flex flex-column mt-5">
-      <span className="header-text fs-5 me-5" onClick={handleNextConcerts}>Next Concerts</span> 
-      <span className="header-text fs-5" onClick={handlePastConcerts}>Past Concerts</span>
+      <span className={`${status ? "list-selected display-4 me-5" : "display-6 me-5"}`} onClick={handleNextConcerts}>Next Concerts</span> 
+      <span className={`${status ? "display-6 me-5" : "list-selected display-4 me-5"}`} onClick={handlePastConcerts}>Past Concerts</span>
       </div>
       <div>{status ? <NextConcertList /> : <PastConcertsList />}</div>
       </div>
