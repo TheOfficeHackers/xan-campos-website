@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./VideosHome.css"
 
 function VideosHome() {
   return (
@@ -23,10 +24,10 @@ function VideosHome() {
               VIDEOS
             </div>
 
-            <div className="col-lg-5 col-md-2 mb-4 mb-lg-0 display-1">
+            <div className="col-lg-5 col-md-2 mb-4 mb-lg-0 display-1 video-pic-filter px-0">
             <img
                     src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666546534/xan-campos-web/Amoria7_b8efxt.jpg"
-                    className="card-img-top"
+                    className="card-img-top pic-videos-home"
                     alt="Realismo"
                   />
             </div>

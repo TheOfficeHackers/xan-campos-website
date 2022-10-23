@@ -46,7 +46,7 @@ function NextConcertsHome() {
                     key={concert.id}
                     className="col-lg-2 col-md-6 mb-8 mb-lg-0"
                   >
-                    <div className="d-flex row">
+                    <div className="row">
                       <div className="fs-5">
                         {moment(concert.date).format("MMM DD")}, {concert.hour}
                         h.

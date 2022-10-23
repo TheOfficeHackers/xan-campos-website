@@ -1,0 +1,16 @@
+.video-pic-filter {
+  background-color: rgb(151, 21, 4);
+}
+
+.pic-videos-home:hover {
+  opacity: 0.6;
+  
+}
+
+.pic-videos-home:hover{
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5)
+}

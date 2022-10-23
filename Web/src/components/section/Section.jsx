@@ -5,8 +5,8 @@ function Section({ className, text }) {
   return (
     <section className={className}>
       <div className="container">
-        <div className="section-main display-5 pt-2">{text}</div>
-        <p className="section-line m-0" style={{width:"500px"}}></p>
+        <div className="section-main display-3 pt-5">{text}</div>
+        <p className="section-line m-0 pb-5" style={{width:"550px"}}></p>
       </div>
     </section>
   );

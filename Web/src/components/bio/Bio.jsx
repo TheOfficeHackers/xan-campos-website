@@ -4,7 +4,7 @@ function Bio() {
   return (
     <div className="container my-5 pb-5 pb-3">
       <h1 className="mt-5 mb-5 display-5">
-        Xan Campos, <br /> composer and jazz pianist{" "}
+        Xan Campos, <br />jazz pianist and composer {" "}
       </h1>
       <h5 className="fw-light fs-5">
         {" "}
@@ -28,7 +28,7 @@ function Bio() {
       </h5>
 
       <figure class="text-center mt-5 fw-light">
-        <blockquote class="blockquote">
+        <blockquote class="blockquote mb-4">
           <h6>An explosive tune from this wonderful piano trio. Like a jolt of coffee first thing in the morning, this song will get you awake and moving. Relentless.</h6>
         </blockquote>
         <figcaption class="blockquote-footer">
