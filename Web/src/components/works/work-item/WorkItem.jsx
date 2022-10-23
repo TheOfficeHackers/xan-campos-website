@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./WorkItem.css";
 
+
 let music;
 
 function WorkItem({ cover, title, artists, tracks, releaseDate }) {
@@ -51,9 +52,14 @@ function WorkItem({ cover, title, artists, tracks, releaseDate }) {
     <div className="card py-4 px-5 my-3 bg-dark" style={{ maxWidth: "960px", margin: "auto" }}>
       <div className="row g-0 text-light">
         <div className="work-card card col-md-4 my-2 border-0 bg-dark">
+        <div className="d-flex flex-column d-flex align-items-start "> 
           <h4>
             {title} ({releaseYear})
           </h4>
+          <a href="https://xancampos.bandcamp.com/">
+          <button class="btn btn-outline-danger btn-sm"  style={{ fontFamily: "Zen Dots" }} type="submit">BUY ALBUM</button>
+          </a>
+        </div>
         </div>
 
         <div
