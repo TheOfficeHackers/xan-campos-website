@@ -29,24 +29,24 @@ function AdminDashboardScreen() {
 
       <div className="position-absolute top-50 start-50 translate-middle">
         <div className= "d-flex justify-content-between mb-2">
-        <span
-          className="create-concert-label header-text fs-5 me-5"
+        <div
+          className="create-concert-label header-text fs-5"
           onClick={handleCreateConcert}
         >
           Create Concert
-        </span>
-        <span
+        </div>
+        <div
           className="create-colabo-label header-text fs-5"
           onClick={handleCreateColabo}
         >
-          Create Colabo
-        </span>
-        <span
+          Create Collabo
+        </div>
+        <div
           className="create-sideman-label header-text fs-5"
           onClick={handleCreateSideman}
         >
           Create Sideman
-        </span>
+        </div>
         </div>
         {(() => {
           switch (status) {

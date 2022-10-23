@@ -40,7 +40,7 @@ function ColaboForm() {
           <input
             type="text"
             className={`form-control ${errors.title ? "is-invalid" : ""}`}
-            placeholder="Colabo title"
+            placeholder="Collabo title"
             {...register("title", {
               required: "Title is required",
               maxLength: { value: 50, message: "Title is too long" },
@@ -56,7 +56,7 @@ function ColaboForm() {
           <input
             type="text"
             className={`form-control ${errors.mainArtist ? "is-invalid" : ""}`}
-            placeholder="Colabo main artist"
+            placeholder="Collabo main artist"
             {...register("mainArtist", {
               required: "Main artist is required",
             })}
@@ -67,11 +67,26 @@ function ColaboForm() {
         </div>
 
         <div className="input-group mb-1">
+          <span className="colabo-input-name input-group-text">Musicians</span>
+          <input
+            type="text"
+            className={`form-control ${errors.musicians ? "is-invalid" : ""}`}
+            placeholder="Collabo musicians"
+            {...register("musicians", {
+              required: "Musicians are required",
+            })}
+          />
+          {errors.musicians && (
+            <div className="invalid-feedback">{errors.musicians.message}</div>
+          )}
+        </div>
+
+        <div className="input-group mb-1">
           <span className="colabo-input-name input-group-text">Release year</span>
           <input
             type="text"
             className={`form-control ${errors.releaseYear ? "is-invalid" : ""}`}
-            placeholder="Colabo release year"
+            placeholder="Collabo release year"
             {...register("releaseYear", {
               required: "Release year is required",
             })}
@@ -86,7 +101,7 @@ function ColaboForm() {
           <input
             type="file"
             className={`form-control ${errors.cover ? "is-invalid" : ""}`}
-            placeholder="Colabo cover"
+            placeholder="Collabo cover"
             {...register("cover", {
               required: "Cover is required",
             })}
@@ -97,11 +112,26 @@ function ColaboForm() {
         </div>
 
         <div className="input-group mb-1">
+          <span className="colabo-input-name input-group-text">Project</span>
+          <input
+            type="text"
+            className={`form-control ${errors.project ? "is-invalid" : ""}`}
+            placeholder="Collabo project"
+            {...register("project", {
+              required: "Project is required",
+            })}
+          />
+          {errors.project && (
+            <div className="invalid-feedback">{errors.project.message}</div>
+          )}
+        </div>
+
+        <div className="input-group mb-1">
           <span className="colabo-input-name input-group-text">Record label</span>
           <input
             type="text"
             className={`form-control ${errors.recordLabel ? "is-invalid" : ""}`}
-            placeholder="Colabo record label"
+            placeholder="Collabo record label"
             {...register("recordLabel", {
               required: "Record label is required",
             })}
@@ -117,7 +147,7 @@ function ColaboForm() {
             type="submit"
             disabled={!isValid}
           >
-            CREATE COLABO
+            CREATE COLLABO
           </button>
         </div>
       </div>
