@@ -5,7 +5,7 @@ function WorksHome() {
   return (
     <>
       <Link to="works" className="text-decoration-none">
-        <div className="container py-5">
+        {/* <div className="container py-5">
           <div class="row">
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
               <div class="card shadow-sm border-0 rounded">
@@ -26,9 +26,9 @@ function WorksHome() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* <div className="container">
+        <div className="container">
           <div className="row vh-100 text-dark d-flex justify-content-around align-items-center">
             <div className="col-sm-2 col-lg-2">
               <div className="justify-content-around align-items-center">
@@ -50,12 +50,12 @@ function WorksHome() {
                   
                 </div>
                 <button type="button" class="btn btn-danger btn-lg ">
-                      Listen this and other music!
+                      Listen & enjoy it!
                 </button>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </Link>
     </>
   );
