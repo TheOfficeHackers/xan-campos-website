@@ -26,7 +26,7 @@ function NextConcertsHome() {
             backgroundSize: "cover",
           }}
         >
-          <div className="m-0 vh-100 row justify-content-center align-items-center">
+          <div className="m-0 vh-100 row justify-content-center align-items-center ">
             <div
               className="col-lg-5 col-md-2 mb-4 mb-lg-0 display-1"
               style={{ fontFamily: "Zen Dots" }}
