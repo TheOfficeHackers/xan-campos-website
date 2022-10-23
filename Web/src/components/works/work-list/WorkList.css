@@ -1,3 +1,10 @@
-.works-list {
-  background-color: #EEEDE5;
+.section-leader {
+  color: rgb(168, 44, 44);
+
+}
+
+.span-leader {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: rgb(168, 44, 44);
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getSideman } from "../../../services/website-service";
-import SidemanItem from "../sideman-item/SidemanItem"
+import SidemanItem from "../sideman-item/SidemanItem";
+import "../sideman-list/SidemanList.css";
 
 
 function SidemanList() {
@@ -15,7 +16,8 @@ function SidemanList() {
 
 
   return (
-    <div className="container mb-5">
+    <div className="sideman-list">
+    <div className="container pt-3 pb-2 sideman-list">
       <div className="row">
           {sidemanWorks
             ? sidemanWorks.map((sidemanWork) => (
@@ -25,6 +27,7 @@ function SidemanList() {
               ))
             : "Loading..."}
         </div>
+      </div>
       </div>
   );
 }

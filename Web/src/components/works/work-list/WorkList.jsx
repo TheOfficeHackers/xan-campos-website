@@ -22,9 +22,10 @@ function WorkList({ className }) {
   console.log(worksXanTrio);
 
   return (
-    <div className="works-list">
+    <div>
       <div className="container">
-        <div className="text-danger display-3 mt-0 ">Leader</div>
+        <div className="section-leader display-3 mt-3 ">Leader</div>
+        <span className="span-leader" style={{width:"100px"}}></span>
       </div>
 
       <div className={className}>

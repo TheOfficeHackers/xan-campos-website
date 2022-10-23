@@ -13,7 +13,6 @@ function WorksScreen() {
       <WorkList />
       <SidemanList /> 
       <ColabosList />
-      <hr></hr> 
       <Footer />
     </>
   );

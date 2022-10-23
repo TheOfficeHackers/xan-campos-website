@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getColabos } from "../../../services/website-service";
 import ColaboItem from "../colabo-item/ColaboItem";
+import "../colabos-list/ColabosList.css";
 
 function ColabosList() {
   const [colabos, setColabos] = useState(null);
@@ -14,7 +15,8 @@ function ColabosList() {
   console.log(colabos);
 
   return (
-    <div className="container mb-5">
+    <div className="colabos-list">
+    <div className="container pt-4 pb-4 colabos-list">
       <div className="row">
           {colabos
             ? colabos.map((colabo) => (
@@ -24,6 +26,7 @@ function ColabosList() {
               ))
             : "Loading..."}
       </div>
+    </div>
     </div>
   );
 }
