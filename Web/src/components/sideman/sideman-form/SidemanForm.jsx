@@ -67,6 +67,21 @@ function SidemanForm() {
         </div>
 
         <div className="input-group mb-1">
+          <span className="sideman-input-name input-group-text">Musicians</span>
+          <input
+            type="text"
+            className={`form-control ${errors.musicians ? "is-invalid" : ""}`}
+            placeholder="Sideman musicians"
+            {...register("musicians", {
+              required: "Musicians are required",
+            })}
+          />
+          {errors.musicians && (
+            <div className="invalid-feedback">{errors.musicians.message}</div>
+          )}
+        </div>
+
+        <div className="input-group mb-1">
           <span className="sideman-input-name input-group-text">Release year</span>
           <input
             type="text"
@@ -93,6 +108,21 @@ function SidemanForm() {
           />
           {errors.cover && (
             <div className="invalid-feedback">{errors.cover.message}</div>
+          )}
+        </div>
+
+        <div className="input-group mb-1">
+          <span className="sideman-input-name input-group-text">Project</span>
+          <input
+            type="text"
+            className={`form-control ${errors.project ? "is-invalid" : ""}`}
+            placeholder="Sideman project"
+            {...register("project", {
+              required: "Project is required",
+            })}
+          />
+          {errors.project && (
+            <div className="invalid-feedback">{errors.project.message}</div>
           )}
         </div>
 
