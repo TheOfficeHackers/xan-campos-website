@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
-//import { useState } from "react";
-//import { getVideos } from "../../../services/website-service";
+import React from "react";
+import { Section } from "../../../components";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import ReactPlayer from "react-player";
-import CoverPicture from "../../cover-picture/CoverPicture";
+
 
 const YoutubeSlide = ({ url, isSelected }) => (
   <ReactPlayer width="100%" url={url} />
@@ -28,10 +27,9 @@ function VideoList() {
     });
 
   return (
-    <>
-   
-      
-      <div className="container" style={{maxWidth:"1000px"}}>
+    <>    
+      <Section className="mt-4" text="Xan Campos Trio"/>
+      <div className="container mt-2" style={{maxWidth:"1000px"}}>
         <Carousel
           renderItem={customRenderItem}
           renderThumbs={customRenderThumb}
@@ -79,6 +77,7 @@ function VideoList() {
         </Carousel>
       </div>
 
+      <Section text="Sideman / Co-leader"/>
       <div className="container" style={{maxWidth:"1000px"}}>
       <Carousel renderItem={customRenderItem} renderThumbs={customRenderThumb}>
         <YoutubeSlide
@@ -104,6 +103,7 @@ function VideoList() {
       </Carousel>
       </div>
 
+      <Section text="Collaborations"/>
       <div className="container" style={{maxWidth:"1000px"}}>
       <Carousel renderItem={customRenderItem} renderThumbs={customRenderThumb}>
         <YoutubeSlide
@@ -115,40 +115,10 @@ function VideoList() {
           url="https://www.youtube.com/embed/1DRfg_mR2m0"
         />
       </Carousel>
-      </div>
-      
+      </div>    
     </>
   );
-}
+};
 
 export default VideoList;
 
-// function VideoList() {
-//   const [videos, setVideos] = useState(null);
-
-//   useEffect(() => {
-//     getVideos()
-//       .then((videos) => setVideos(videos.data))
-//       .catch((err) => console.error(err));
-//   }, []);
-//   console.log(videos)
-//   if(!videos) return <></>
-
-//   return (
-//     <>
-//       <div>
-//       <Carousel />
-//       {/* <Carousel >
-//       {
-//         videos.filter((video) => video.role === "Leader").map((video) => (
-//                 <div key={video.id}>
-
-//                   <ReactPlayer  url={video.url} controls={true} renderItem="https://cdn.stocksnap.io/img-thumbs/960w/woodpecker-bird_6XMNEMASTW.jpg" />
-//                 </div>
-//         ))
-//       }
-//       </Carousel> */}
-//       </div>
-//     </>
-//   )
-// }
