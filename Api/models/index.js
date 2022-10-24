@@ -4,5 +4,6 @@ module.exports = {
   Video: require("./video.model"),
   Colabo: require("./colabo.model"),
   Contact: require("./message.model"),
-  Sideman: require("./sideman.model")
+  Sideman: require("./sideman.model"),
+  EasterEgg: require("./easter-egg.model"),
 };

@@ -62,3 +62,7 @@ export function createSideman(sideman) {
 
   return http.post("/sideman", sideman)
 };
+
+export function getEasterEggs() {
+  return http.get("/easter-egg")
+};

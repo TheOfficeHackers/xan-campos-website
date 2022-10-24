@@ -6,3 +6,4 @@ export { default as ContactScreen } from "./contact/ContactScreen";
 export { default as AdminAuthScreen } from "./admin-auth/AdminAuthScreen";
 export { default as AdminDashboardScreen } from "./admin-dashboard/AdminDashboardScreen";
 export { default as ErrorsScreen } from "./errors/ErrorsScreen";
+export { default as EasterEggScreen } from "./easter-egg/EasterEggScreen";

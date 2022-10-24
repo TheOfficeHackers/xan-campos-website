@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { concerts, auth, videos, works, colabos, message, sideman } = require('../controllers/');
+const { concerts, auth, videos, works, colabos, message, sideman, easterEgg } = require('../controllers/');
 const secure = require("../middleware/secure.mid");
 const upload = require("./multer.config");
 
@@ -21,7 +21,7 @@ router.get('/sideman', sideman.list);
 router.post('/sideman', secure.isAuthenticated, upload.single('cover'), sideman.create);
 router.delete('/sideman/:id', secure.isAuthenticated, sideman.delete);
 
-router.post('/message', message.create)
+router.post('/message', message.create);
 
 router.get('/worksXanTrio', works.listAlbumsXanTrio);
 router.get('/worksXan', works.listAlbumsXan);
@@ -31,5 +31,7 @@ router.post("/register", auth.register);
 router.post("/authenticate", auth.authenticate);
 router.delete("/logout", auth.logout);
 
+router.get("/easter-egg", easterEgg.list);
+router.post("/easter-egg", easterEgg.create);
 
 module.exports = router;

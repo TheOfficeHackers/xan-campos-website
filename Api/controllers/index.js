@@ -6,4 +6,5 @@ module.exports = {
   colabos: require("./colabos.controller"),
   message: require("./message.controller"),
   sideman: require("./sideman.controller"),
+  easterEgg: require("./easter-egg.controller")
 };
