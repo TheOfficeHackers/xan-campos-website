@@ -8,7 +8,7 @@ import ContactForm from '../../components/contact-form/ContactForm'
 function ContactScreen() {
   return (
     <>
-      <Header />
+      <Header color="light"/>
       <CoverPicture src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666372245/xan-campos-web/contact-pic-def_pb1xvn.png"/>
       <div class="position-absolute top-50 start-50 translate-middle"><ContactForm /></div>
     </>

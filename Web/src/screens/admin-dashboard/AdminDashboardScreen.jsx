@@ -26,7 +26,7 @@ function AdminDashboardScreen() {
 
   return (
     <>
-      <Header />
+      <Header color="danger"/>
       <CoverPicture src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666542624/xan-campos-web/dashboard-cover_cdqiph.png" />
 
       <div className="position-absolute top-50 start-50 translate-middle">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 
 
-function Header() {
+function Header({ color }) {
   return (
     <div className="py-2 px-5 fixed-top">
       <div className="d-flex my-4 header-text">
@@ -71,14 +71,14 @@ function Header() {
           
         </div>
 
-        <div className="header-title text-dark">
+        <div className={`header-title text-${color}`}>
           <div className="fs-3">XANCAMPOS</div>
         </div>
 
         {/* button */}
         <div className="ms-auto">
           <i
-            className="fa fa-bars text-dark fs-3"
+            className={`fa fa-bars text-${color} fs-3`}
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#demo"

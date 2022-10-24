@@ -13,7 +13,7 @@ import "../works/WorksScreen.css";
 function WorksScreen() {
   return (
     <>
-      <Header />
+      <Header color="dark"/>
       <CoverPicture src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666366628/xan-campos-web/cover-works_ct7xqm.png" />
       <Section className="mt-3" text="Leader" />
       <WorkList className="pb-4"/>

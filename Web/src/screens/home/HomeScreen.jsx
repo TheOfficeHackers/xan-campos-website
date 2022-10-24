@@ -11,7 +11,7 @@ import AutoplayVideoHome from '../../components/autoplay-video-home/AutoplayVide
 function HomeScreen() {
   return (
     <>
-      <Header />
+      <Header color="dark"/>
       <CoverPicture src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666428895/xan-campos-web/2_r4oyyi.png" />
       <Bio />
       <NextConcertsHome />

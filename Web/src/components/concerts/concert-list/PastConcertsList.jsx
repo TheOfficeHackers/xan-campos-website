@@ -27,7 +27,7 @@ function PastConcertsList() {
                 <ConcertItem {...concert} />
              </div>
         ))
-          : "Loading..."
+          : <div style={{height:"800px"}}></div>
       }  
       </div>
     </>

@@ -5,7 +5,7 @@ import { Header, VideoList, Footer } from "../../components";
 function VideosScreen() {
   return (
     <>
-      <Header />
+      <Header color="danger"/>
       <img
         src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666521092/xan-campos-web/cover-videos2_ndbbho.png"
         alt="xan-campos"

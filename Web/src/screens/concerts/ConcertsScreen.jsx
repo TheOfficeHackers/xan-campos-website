@@ -16,7 +16,7 @@ function ConcertsScreen() {
 
   return (
     <>
-      <Header />
+      <Header color="danger"/>
       <img src={concertpic} alt="xan-campos" style={{width:"100%"}}/>
       <h2
       className="header-text"
@@ -33,8 +33,8 @@ function ConcertsScreen() {
       
       <div className="container">
       <div className="d-flex flex-column mt-5">
-      <span className={`${status ? "list-selected display-4 me-5" : "display-6 me-5"}`} onClick={handleNextConcerts}>Next Concerts</span> 
-      <span className={`${status ? "display-6 me-5" : "list-selected display-4 me-5"}`} onClick={handlePastConcerts}>Past Concerts</span>
+      <span className={`${status ? "list-selected display-4 me-5 fw-semibold" : "display-6 me-5"}`} role="button" onClick={handleNextConcerts}>Next Concerts</span> 
+      <span className={`${status ? "display-6 me-5" : "list-selected display-4 me-5 fw-semibold"}`}  role="button" onClick={handlePastConcerts}>Past Concerts</span>
       </div>
       <div>{status ? <NextConcertList /> : <PastConcertsList />}</div>
       </div>
