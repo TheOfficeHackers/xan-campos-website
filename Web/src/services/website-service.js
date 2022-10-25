@@ -70,3 +70,7 @@ export function createSideman(sideman) {
 export function getEasterEggs() {
   return http.get("/easter-egg")
 };
+
+export function getLogOut() {
+  return http.delete("/logout");
+};
