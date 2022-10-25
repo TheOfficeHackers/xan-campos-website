@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getSideman } from "../../../services/website-service";
+import Loading from "../../loading/Loading";
 import SidemanItem from "../sideman-item/SidemanItem";
 import "../sideman-list/SidemanList.css";
 
@@ -25,7 +26,7 @@ function SidemanList() {
                   <SidemanItem {...sidemanWork} />
                 </div>
               ))
-            : "Loading..."}
+            : <Loading />}
         </div>
       </div>
       </div>

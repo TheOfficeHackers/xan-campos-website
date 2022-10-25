@@ -4,6 +4,7 @@ import { useState } from "react";
 import { getConcerts } from "../../../services/website-service";
 import ConcertItem from "../concert-item/ConcertItem";
 import moment from "moment";
+import Loading from "../../loading/Loading";
 
 function PastConcertsList() {
   const [concerts, setConcerts] = useState(null);
@@ -27,7 +28,7 @@ function PastConcertsList() {
                 <ConcertItem {...concert} />
              </div>
         ))
-          : <div style={{height:"800px"}}></div>
+          : <Loading />
       }  
       </div>
     </>

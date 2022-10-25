@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getColabos } from "../../../services/website-service";
+import Loading from "../../loading/Loading";
 import ColaboItem from "../colabo-item/ColaboItem";
 import "../colabos-list/ColabosList.css";
 
@@ -24,7 +25,7 @@ function ColabosList() {
                   <ColaboItem {...colabo} />
                 </div>
               ))
-            : "Loading..."}
+            : <Loading />}
       </div>
     </div>
     </div>

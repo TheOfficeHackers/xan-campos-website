@@ -33,13 +33,16 @@ function WorkList({ className }) {
             </div>
           ))
         ) : (
-          <div className="m-0 vh-100 row justify-content-center">
-            <div className="col-auto">
-              <img
+          <div className="m-0 vh-50 row justify-content-center">
+            <div className="col-auto mt-5">
+              {/* <img
                 className=" justify-content-center"
-                src="https://media.giphy.com/media/FMW20upY7JfTRfhVq7/giphy.gif" style={{width:"40rem"}}
+                src="http://lepassetempsderose.l.e.pic.centerblog.net/9d6e9cbb.gif" style={{width:"15rem"}}
                 alt="loading"
-              />
+                 
+              /> */}
+              <span className="spinner-grow me-1"> </span><span className="spinner-grow me-1"></span><span className="spinner-grow me-1"></span>
+              <div className="row justify-content-center display-6 mt-4">Loading...</div>
             </div>
           </div>
         )}
