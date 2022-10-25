@@ -42,7 +42,6 @@ function WorkList({ className }) {
                  
               /> */}
               <span className="spinner-grow me-1"> </span><span className="spinner-grow me-1"></span><span className="spinner-grow me-1"></span>
-              <div className="row justify-content-center display-6 mt-4">Loading...</div>
             </div>
           </div>
         )}

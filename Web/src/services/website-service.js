@@ -5,6 +5,10 @@ const http = axios.create({
   withCredentials: true,
 });
 
+export function getProfile() {
+  return http.get("/profile");
+} 
+
 export function getWorksXanTrio() {
   return http.get("/worksXanTrio");
 };
