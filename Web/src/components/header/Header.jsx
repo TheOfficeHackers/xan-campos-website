@@ -4,7 +4,11 @@ import "./Header.css";
 import { AuthContext } from "../contexts/AuthContext";
 
 function Header({ color }) {
-  const { user } = useContext(AuthContext);
+  // const { user } = useContext(AuthContext);
+
+  // if (!user) {
+  //   return null;
+  // }
 
   return (
     <div className="py-2 px-5 fixed-top">
@@ -60,7 +64,20 @@ function Header({ color }) {
                 >
                   <p>CONTACT</p>
                 </Link>
-              </li>  
+              </li>
+
+              {/* {user ? (
+                <li>
+                  <Link
+                    to="/logout"
+                    className="text-decoration-none text-light fs-2"
+                  >
+                    <p>LOGOUT</p>
+                  </Link>
+                </li>
+              ) : (
+                <></>
+              )} */}
             </ul>
 
             <div className="d-flex justify-content-around">
