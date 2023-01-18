@@ -14,7 +14,6 @@ function App() {
           <Route path="/admin/login" element={<AdminAuthScreen />} />
           <Route path="/admin/dashboard" element={<AdminDashboardScreen />} />
           <Route path="/easter-egg" element={<EasterEggScreen />} />
-          <Route path="/logout" element={<HomeScreen />} />
           <Route path="*" element={<ErrorsScreen />} />
         </Routes>
       </div>

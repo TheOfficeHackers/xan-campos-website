@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PastConcertsList, NextConcertList, Header, Footer } from "../../components";
+import { PastConcertsList, NextConcertList, Header, Footer, CoverPicture } from "../../components";
 import concertpic from "../../images/xct-concert.jpg"
 
 
@@ -17,19 +17,7 @@ function ConcertsScreen() {
   return (
     <>
       <Header color="danger"/>
-      <img src={concertpic} alt="xan-campos" style={{width:"100%"}}/>
-      <h2
-      className="header-text"
-      style={{
-        position: "absolute",
-        fontSize: "10rem",
-        color: "white",
-        top: "175px",
-        right: "180px",
-      }}
-    >
-      CONCERTS
-    </h2> 
+      <CoverPicture src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666710974/xan-campos-web/concerts-cover_xmyvil.png" />
       
       <div className="container">
       <div className="d-flex flex-column mt-5">
