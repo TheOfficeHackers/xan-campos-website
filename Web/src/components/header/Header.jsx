@@ -26,7 +26,8 @@ function Header({ color }) {
             ></i>
           </div>
 
-          <div className="offcanvas-body bgcolor fw-bold d-flex flex-column justify-content-evenly ">
+          <div className="offcanvas-body bgcolor fw-bold d-flex flex-column justify-content-evenly">
+          <div className="d-flex">
             <ul className="list-unstyled d-flex flex-column">
               <li>
                 <Link to="/" className="text-decoration-none text-light fs-2">
@@ -79,8 +80,9 @@ function Header({ color }) {
                 <></>
               )} */}
             </ul>
+            </div>
 
-            <div className="d-flex justify-content-around">
+            <div className="d-flex m-0 p-0 justify-content-around">
               <i className="fa-brands fa-facebook-f fs-3 text-light social"></i>
               <i className="fa-brands fa-twitter fs-3 text-light social"></i>
               <i className="fa-brands fa-youtube fs-3 text-light social"></i>
