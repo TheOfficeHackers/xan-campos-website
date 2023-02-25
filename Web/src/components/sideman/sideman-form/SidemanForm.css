@@ -4,6 +4,12 @@
   width: 45rem;
 }
 
+@media only screen and (max-width: 450px) {
+  .sideman-card {
+    width: 25rem;
+  }
+}
+
 .sideman-input-name {
   background-color: rgba(2,2,2,0.4);
   border: none;
