@@ -6,4 +6,11 @@
   border-top-style: solid;
   border-top-width: 3px;
   border-top-color: rgb(134, 130, 130);
+  width: 90%;
+}
+
+@media (min-width:450px) {
+  .line {
+    width: 650px;
+  }
 }

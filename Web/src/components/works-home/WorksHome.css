@@ -1,0 +1,15 @@
+@media only screen and (max-width: 450px) {
+  #work-cover {
+    margin-bottom: 1rem;
+    width: 10rem;
+    max-width: 100px;
+    height: auto;
+  }
+}
+
+#realismo-cover {
+  margin-bottom: 1rem;
+  width: 10rem;
+  max-width: 100px;
+  height: auto;
+}
