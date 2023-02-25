@@ -20,3 +20,4 @@ export { default as Footer } from "./footer/Footer";
 export { default as AdminAuthForm } from "./admin/admin-auth-form/AdminAuthForm";
 export { default as EasterEggCard } from "./easter-egg/easter-egg-card/EasterEggCard";
 export { default as EasterEggList } from "./easter-egg/easter-egg-list/EasterEggList";
+export { default as ScrollButton } from "./UI/ScrollButton";

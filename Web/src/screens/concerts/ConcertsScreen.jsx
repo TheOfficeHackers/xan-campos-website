@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PastConcertsList, NextConcertList, Header, Footer, CoverPicture } from "../../components";
+import { PastConcertsList, NextConcertList, Header, Footer, CoverPicture, ScrollButton } from "../../components";
 import concertpic from "../../images/xct-concert.jpg"
 
 
@@ -18,7 +18,7 @@ function ConcertsScreen() {
     <>
       <Header color="danger"/>
       <CoverPicture src="https://res.cloudinary.com/dyl3cklgp/image/upload/v1666710974/xan-campos-web/concerts-cover_xmyvil.png" />
-      
+      <ScrollButton />
       <div className="container">
       <div className="d-flex flex-column mt-5">
       <span className={`${status ? "list-selected display-4 me-5 fw-semibold" : "display-6 me-5"}`} role="button" onClick={handleNextConcerts}>Next Concerts</span> 
