@@ -52,3 +52,4 @@ app.listen(port, () =>
   console.log(`Xan Campos website api running at port ${port}`)
 );
 
+module.exports = app;
